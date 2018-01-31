@@ -1,5 +1,12 @@
 {
   "name": "scrollo",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "postinstall": "webpack"
+  },
+  "engines": {
+    "npm": "3.10.10",
+    "node": "6.10.1"
+  }
 }
