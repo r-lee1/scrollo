@@ -1,0 +1,75 @@
+body {
+  background-color: #36465d;
+  height: 100vh;
+}
+
+.form-page {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15px;
+}
+
+.navbar button {
+  display: inline-block;
+  color: #444;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 5px 7px;
+  margin: 15px 8px 15px 8px;
+  border-radius: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text: none;
+
+}
+
+.logo {
+  font-size: 56px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  width: 232px;
+  height: 50px;
+  padding: 20px;
+}
+
+.session-form-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 740px;
+  height: 266px;
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.session-form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.session-form-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.session-form label {
+  margin: 0 auto;
+
+}
+
+.session-form button {
+  margin: 0 auto;
+}

@@ -7,7 +7,7 @@ class SessionForm extends React.Component {
       username: '',
       password: ''
     };
-    
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
   }
@@ -46,24 +46,32 @@ class SessionForm extends React.Component {
 
   render(){
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          {this.renderErrors()}
-          <label>Username:
-          <input
-            onChange={this.handleInput("username")}
-            type="text"
-            value={this.state.username}></input>
-          </label>
-          <label>Password:
-          <input
-            onChange={this.handleInput("password")}
-            type="text"
-            value={this.state.password}></input>
-          </label>
-          <button>Sign In</button>
-          <button onClick={this.handleDemo}>Demo</button>
-        </form>
+      <div className="form-page">
+        <div className="session-form-container">
+          <h1 className="logo">scrollo.</h1>
+          <form className="session-form" onSubmit={this.handleSubmit}>
+            <div className="session-form-input">
+              {this.renderErrors()}
+              <label>Username:
+              <input
+                placeholder="Username"
+                onChange={this.handleInput("username")}
+                type="text"
+                value={this.state.username}></input>
+              </label>
+              <label>Password:
+              <input
+                onChange={this.handleInput("password")}
+                type="text"
+                value={this.state.password}></input>
+              </label>
+            </div>
+            <div className="session-form-btn">
+              <button>Sign In</button>
+              <button onClick={this.handleDemo}>Demo</button>
+            </div>
+          </form>
+        </div>
       </div>
       );
   }

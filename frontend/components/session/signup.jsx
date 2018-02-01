@@ -38,28 +38,31 @@ class Signup extends React.Component {
   render(){
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          {this.renderErrors()}
-          <label>Username:
-          <input
-            onChange={this.handleInput("username")}
-            type="text"
-            value={this.state.username}></input>
-          </label>
-          <label>Email:
-          <input
-            onChange={this.handleInput("email")}
-            type="text"
-            value={this.state.email}></input>
-          </label>
-          <label>Password:
-          <input
-            onChange={this.handleInput("password")}
-            type="text"
-            value={this.state.password}></input>
-          </label>
-          <button>Create Account</button>
-        </form>
+        <h1 className="logo">scrollo.</h1>
+        <div className="session-form-container">
+          <form className="session-form" onSubmit={this.handleSubmit}>
+            {this.renderErrors()}
+            <label>Username:
+            <input
+              onChange={this.handleInput("username")}
+              type="text"
+              value={this.state.username}></input>
+            </label>
+            <label>Email:
+            <input
+              onChange={this.handleInput("email")}
+              type="text"
+              value={this.state.email}></input>
+            </label>
+            <label>Password:
+            <input
+              onChange={this.handleInput("password")}
+              type="text"
+              value={this.state.password}></input>
+            </label>
+            <button>Create Account</button>
+          </form>
+        </div>
       </div>
       );
   }
