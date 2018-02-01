@@ -16,8 +16,8 @@ const App = () => {
         <h1>Scrollo</h1>
         <NavBarContainer />
       </header>
-      <AuthRoute path="/signup" component={SignupContainer} />
-      <Route path="/login" component={SessionFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupContainer} />
+      <AuthRoute exact path="/login" component={SessionFormContainer} />
     </div>
   );
 };

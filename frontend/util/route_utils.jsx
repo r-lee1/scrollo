@@ -6,7 +6,7 @@ const mapStateToProps = (state) => ({
   loggedIn: Boolean(state.session.currentUser)
 });
 
-const Auth = ({  loggedIn, path, component: Component }) => (
+const Auth = ({  loggedIn, exact, path, component: Component }) => (
   <Route
     path={path}
     render={props => (
@@ -15,7 +15,7 @@ const Auth = ({  loggedIn, path, component: Component }) => (
   />
 );
 
-const Protected = ({ loggedIn, path, component: Component }) => (
+const Protected = ({ loggedIn, exact, path, component: Component }) => (
   <Route
     path={path}
     render={props => (
