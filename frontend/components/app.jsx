@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container';
+import SessionFormContainer from './session/session_form_container';
 import { Route } from 'react-router-dom';
 import {
   AuthRoute,
@@ -16,6 +17,7 @@ const App = () => {
         <NavBarContainer />
       </header>
       <AuthRoute path="/signup" component={SignupContainer} />
+      <Route path="/login" component={SessionFormContainer} />
     </div>
   );
 };
