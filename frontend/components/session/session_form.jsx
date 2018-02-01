@@ -9,11 +9,21 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state);
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const user = {
+      username: "guest",
+      password: "password"
+    };
+    this.props.login(user);
   }
 
   handleInput(type) {
@@ -39,6 +49,7 @@ class SessionForm extends React.Component {
             value={this.state.password}></input>
           </label>
           <button>Sign In</button>
+          <button onClick={this.handleDemo}>Demo</button>
         </form>
       </div>
       );
