@@ -4,6 +4,13 @@ class User < ApplicationRecord
 
   before_validation :ensure_session_token
 
+  has_many(
+    :authored_posts,
+    class_name: 'Post',
+    foreign_key: :author_id,
+    primary_key: :id
+  )
+
   attr_reader :password
 
   def self.find_by_credentials(email, password)
