@@ -79,7 +79,7 @@ body {
   width: 100%;
   cursor: pointer;
   padding: 12px;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
   border-radius: 2px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -95,5 +95,6 @@ body {
   padding-bottom: 10px;
   padding-top: 10px;
   color: white;
+  text-align: center;
 
 }
