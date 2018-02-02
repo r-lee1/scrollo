@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <header>
-        <NavBarContainer />
+        <Route component={NavBarContainer} />
       </header>
       <AuthRoute exact path="/signup" component={SignupContainer} />
       <AuthRoute exact path="/login" component={SessionFormContainer} />

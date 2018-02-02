@@ -3,11 +3,6 @@ body {
   height: 100vh;
 }
 
-.form-page {
-  height: 100%;
-  width: 100%;
-}
-
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -16,6 +11,7 @@ body {
 
 .navbar button {
   display: inline-block;
+  box-sizing: border-box;
   color: #444;
   background-color: #fff;
   cursor: pointer;
@@ -25,7 +21,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
-  text: none;
 
 }
 
@@ -37,6 +32,7 @@ body {
   width: 232px;
   height: 50px;
   padding: 20px;
+  text-align: center;
 }
 
 .session-form-container {
@@ -47,29 +43,57 @@ body {
   align-items: center;
   font-family: Helvetica, Arial, sans-serif;
   width: 740px;
-  height: 266px;
+  height: 500px;
 }
 
 .session-form {
   display: flex;
   flex-direction: column;
+  width: 40%;
 }
 
 .session-form-input {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.session-form-input input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+
 }
 
 .session-form-btn {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.session-form label {
-  margin: 0 auto;
-
+.session-form-btn button {
+  width: 100%;
+  cursor: pointer;
+  padding: 12px;
+  margin-bottom: 1px;
+  border-radius: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: rgb(82, 158, 204);
+  color: white;
+  border: none;
 }
 
-.session-form button {
-  margin: 0 auto;
+.errors-container {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+
 }

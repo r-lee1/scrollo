@@ -7,9 +7,12 @@ class SessionForm extends React.Component {
       username: '',
       password: ''
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
@@ -34,7 +37,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors-container">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -45,35 +48,36 @@ class SessionForm extends React.Component {
   }
 
   render(){
-    return (
-      <div className="form-page">
-        <div className="session-form-container">
-          <h1 className="logo">scrollo.</h1>
-          <form className="session-form" onSubmit={this.handleSubmit}>
-            <div className="session-form-input">
+      return (
+        <div className="form-page">
+          <div className="session-form-container">
+            <h1 className="logo">scrollo.</h1>
+            <form className="session-form" onSubmit={this.handleSubmit}>
+              <div className="session-form-input">
+                <label>
+                <input
+                  placeholder="Username"
+                  onChange={this.handleInput("username")}
+                  type="text"
+                  value={this.state.username}></input>
+                </label>
+                <label>
+                <input
+                  placeholder="Password"
+                  onChange={this.handleInput("password")}
+                  type="password"
+                  value={this.state.password}></input>
+                </label>
+              </div>
               {this.renderErrors()}
-              <label>Username:
-              <input
-                placeholder="Username"
-                onChange={this.handleInput("username")}
-                type="text"
-                value={this.state.username}></input>
-              </label>
-              <label>Password:
-              <input
-                onChange={this.handleInput("password")}
-                type="text"
-                value={this.state.password}></input>
-              </label>
-            </div>
-            <div className="session-form-btn">
-              <button>Sign In</button>
-              <button onClick={this.handleDemo}>Demo</button>
-            </div>
-          </form>
+              <div className="session-form-btn">
+                <button>Log In</button>
+                <button onClick={this.handleDemo}>Demo</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-      );
-  }
-}
+        );
+      }
+    }
  export default SessionForm;
