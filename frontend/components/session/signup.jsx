@@ -48,13 +48,6 @@ class Signup extends React.Component {
             <div className="session-form-input">
               <label>
               <input
-                placeholder="Username"
-                onChange={this.handleInput("username")}
-                type="text"
-                value={this.state.username}></input>
-              </label>
-              <label>
-              <input
                 placeholder="Email"
                 onChange={this.handleInput("email")}
                 type="text"
@@ -64,8 +57,15 @@ class Signup extends React.Component {
               <input
                 placeholder="Password"
                 onChange={this.handleInput("password")}
-                type="text"
+                type="password"
                 value={this.state.password}></input>
+              </label>
+              <label>
+              <input
+                placeholder="Username"
+                onChange={this.handleInput("username")}
+                type="text"
+                value={this.state.username}></input>
               </label>
             </div>
             {this.renderErrors()}
