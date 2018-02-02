@@ -2,7 +2,8 @@ import React from 'react';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container';
 import SessionFormContainer from './session/session_form_container';
-import { Route } from 'react-router-dom';
+import {Dashboard} from './dashboard';
+import { Route, Switch } from 'react-router-dom';
 import {
   AuthRoute,
   ProtectedRoute
@@ -15,8 +16,11 @@ const App = () => {
       <header>
         <Route component={NavBarContainer} />
       </header>
-      <AuthRoute exact path="/signup" component={SignupContainer} />
-      <AuthRoute exact path="/login" component={SessionFormContainer} />
+      <Switch>
+        <ProtectedRoute exact path ="/" component={Dashboard} />
+        <AuthRoute exact path="/signup" component={SignupContainer} />
+        <AuthRoute exact path="/login" component={SessionFormContainer} />
+      </Switch>
     </div>
   );
 };
