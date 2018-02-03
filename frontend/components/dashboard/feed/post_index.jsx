@@ -1,4 +1,5 @@
 import React from 'react';
+import PostIndexItem from './post_index_item';
 
 class PostIndex extends React.Component {
   constructor(props) {
@@ -13,9 +14,11 @@ class PostIndex extends React.Component {
   render() {
     return (
       <div>
+        <ul>
             {this.props.posts.map(
-              post => { return  <img src={`${post.source}`} />;}
+              post => { return <PostIndexItem key={post.id} post={post} />;}
             )}
+        </ul>
       </div>
     );
   }
