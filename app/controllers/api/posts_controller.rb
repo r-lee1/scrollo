@@ -6,3 +6,6 @@ class Api::PostsController < ApplicationController
   end
 
 end
+
+# u = User.find_by()
+# uPhotos = u.

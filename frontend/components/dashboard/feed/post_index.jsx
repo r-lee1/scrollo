@@ -14,10 +14,7 @@ class PostIndex extends React.Component {
     return (
       <div>
             {this.props.posts.map(
-              post => {
-                console.log(post);
-                return  <img src={`${post.source}`} />;
-              }
+              post => { return  <img src={`${post.source}`} />;}
             )}
       </div>
     );
