@@ -15,44 +15,58 @@ class Dashboard extends React.Component {
       <div>
         <ul className="post-navbar">
           <button>
-            <Link to="/new/text">
-              <i className="fas fa-font"></i>
+            <Link to="/new/text" style={{textDecoration: 'none'}}>
+              <div>
+                <i className="fas fa-font"></i>
+              </div>
               <span>Text</span>
             </Link>
           </button>
           <button>
-            <Link to="/new/photo">
-              <i className="fas fa-camera-retro"></i>
+            <Link to="/new/photo" style={{textDecoration: 'none'}}>
+              <div>
+                <i className="fas fa-camera-retro"></i>
+              </div>
               <span>Photo</span>
             </Link>
           </button>
           <button>
-            <Link to="/new/quote">
-              <i className="fas fa-quote-left"></i>
+            <Link to="/new/quote" style={{textDecoration: 'none'}}>
+              <div>
+                <i className="fas fa-quote-left"></i>
+              </div>
               <span>Quote</span>
           </Link>
         </button>
           <button>
-            <Link to="/new/link">
-              <i className="fas fa-link"></i>
+            <Link to="/new/link" style={{textDecoration: 'none'}}>
+              <div>
+                <i className="fas fa-link"></i>
+              </div>
               <span>Link</span>
           </Link>
         </button>
           <button>
-            <Link to="/new/chat">
-              <i className="fas fa-comment-alt"></i>
+            <Link to="/new/chat" style={{textDecoration: 'none'}}>
+              <div>
+                <i className="fas fa-comment-alt"></i>
+              </div>
               <span>Chat</span>
           </Link>
         </button>
           <button>
-            <Link to="/new/audio">
-              <i className="fas fa-headphones"></i>
+            <Link to="/new/audio" style={{textDecoration: 'none'}}>
+              <div>
+                <i className="fas fa-headphones "></i>
+              </div>
               <span>Audio</span>
           </Link>
         </button>
           <button>
-            <Link to="/new/video">
-              <i className="fas fa-video"></i>
+            <Link to="/new/video" style={{textDecoration: 'none'}}>
+              <div>
+                <i className="fas fa-video"></i>
+              </div>
               <span>Video</span>
           </Link>
         </button>

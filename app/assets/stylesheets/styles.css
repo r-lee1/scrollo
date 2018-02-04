@@ -99,14 +99,57 @@ body {
 
 }
 
+.post-navbar {
+  margin: 15px;
+}
+
 .post-navbar button {
   width: 76px;
   height: 99px;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
-.post-navbar i {
-  font-size: 48px;
+.post-navbar button div {
+  font-size: 34px;
+  font-weight: 400;
+  padding: 3px;
+
+}
+
+.post-navbar button div .fa-font{
+  color: rgb(68, 68, 68);
+}
+
+.post-navbar button div .fa-camera-retro{
+  color: rgb(217, 94, 64);
+}
+
+.post-navbar button div .fa-quote-left{
+  color: rgb(242, 153, 46)
+}
+
+.post-navbar button div .fa-link{
+  color: rgb(86, 188, 138);
+}
+
+.post-navbar button div .fa-comment-alt{
+  color: rgb(82, 158, 204);
+}
+
+.post-navbar button div .fa-headphones{
+  color: rgb(167, 125, 194);
+}
+
+.post-navbar button div .fa-video {
+  color: rgb(116, 128, 137);
+}
+
+.post-navbar button span {
+  color: rgb(105, 105, 105);
+  font-size: 14px;
+  font-weight: 100;
+  text-decoration: none;
 }
 
 .post {
