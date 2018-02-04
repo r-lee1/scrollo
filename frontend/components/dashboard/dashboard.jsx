@@ -16,37 +16,44 @@ class Dashboard extends React.Component {
         <ul className="post-navbar">
           <button>
             <Link to="/new/text">
-              <i className="fas fa-font"></i>Text
+              <i className="fas fa-font"></i>
+              <span>Text</span>
             </Link>
           </button>
           <button>
             <Link to="/new/photo">
-              <i className="fas fa-camera-retro"></i>Photo
+              <i className="fas fa-camera-retro"></i>
+              <span>Photo</span>
             </Link>
           </button>
           <button>
             <Link to="/new/quote">
-              <i className="fas fa-quote-left"></i>Quote
+              <i className="fas fa-quote-left"></i>
+              <span>Quote</span>
           </Link>
         </button>
           <button>
             <Link to="/new/link">
-              <i className="fas fa-link"></i>Link
+              <i className="fas fa-link"></i>
+              <span>Link</span>
           </Link>
         </button>
           <button>
             <Link to="/new/chat">
-              <i className="fas fa-comment-alt"></i>Chat
+              <i className="fas fa-comment-alt"></i>
+              <span>Chat</span>
           </Link>
         </button>
           <button>
             <Link to="/new/audio">
-              <i className="fas fa-headphones"></i>Audio
+              <i className="fas fa-headphones"></i>
+              <span>Audio</span>
           </Link>
         </button>
           <button>
             <Link to="/new/video">
-              <i className="fas fa-video"></i>Video
+              <i className="fas fa-video"></i>
+              <span>Video</span>
           </Link>
         </button>
         </ul>

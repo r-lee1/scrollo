@@ -9,12 +9,14 @@ class PostIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchPosts();
+    console.log("component mounted");
   }
+
 
   render() {
     return (
       <div>
-        <ul>
+        <ul className="feed">
             {this.props.posts.reverse().map(
               post => { return <PostIndexItem key={post.id} post={post} />;}
             )}
@@ -25,3 +27,7 @@ class PostIndex extends React.Component {
 }
 
 export default PostIndex;
+
+
+//bug:
+//posts reversing everytime component is rendered
