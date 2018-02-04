@@ -9,7 +9,7 @@ class PostIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchPosts();
-    console.log("component mounted");
+
   }
 
 

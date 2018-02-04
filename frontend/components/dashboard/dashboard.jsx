@@ -1,14 +1,17 @@
 import React from 'react';
 import PostIndexContainer from './feed/post_index_container';
 import TextPostFormContainer from './post_form/text_post_form_container';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+
+import {
+  AuthRoute,
+  ProtectedRoute
+} from '../../util/route_utils';
 
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
   }
-
-
 
   render() {
     return (
@@ -70,6 +73,7 @@ class Dashboard extends React.Component {
               <span>Video</span>
           </Link>
         </button>
+        <ProtectedRoute exact path ="/new/text" component={TextPostFormContainer} />
         </ul>
         <PostIndexContainer props={this.props} />
       </div>

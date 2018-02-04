@@ -35,7 +35,7 @@ class TextPostForm extends React.Component {
             value={this.state.title.value}>
           </input>
           <textarea
-            onChange={this.updateInput("title")}
+            onChange={this.updateInput("body")}
             placeholder="Your text here"
             value={this.state.body.value}/>
           <button>Post</button>
