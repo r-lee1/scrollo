@@ -1,3 +1,6 @@
+.feed {
+  
+}
 
 .post {
   width: 540px;
@@ -12,13 +15,22 @@
 .post .post-author {
   font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 600;
-  padding: 15px;
+  padding: 18px;
 }
 
 .post .post-photo {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.post .post-title {
+  font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 47px;
+  padding: 18px;
+
 }
 
 .post .post-body {
@@ -28,5 +40,5 @@
     font-size: 14px;
     font-style: normal;
     color: #444;
-    padding: 15px;
+    padding: 18px;
 }

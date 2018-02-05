@@ -1,0 +1,43 @@
+Heroku database reset:
+-heroku restart
+-heroku pg:reset DATABASE
+-heroku run rails db:migrate
+-heroku run rails db:seed
+
+Heroku lec:
+
+Create app -> heroku CLI install -> login to heroku on CL
+Deployment method: heroku Git (separation between pushing code to git and production)
+
+Existing git repo -> add heroku to remote
+
+add to Package json
+"scripts": {
+  "postinstall": "webpack"
+}
+
+"engines": {
+  "npm": "3.10.7", //check version
+  "node": "6.7.0"
+}
+
+add buildpack
+Settings > add buildpack
+nodejs, ruby    //important to add node buildpack first and then ruby buildpack
+
+
+
+push to heroku
+only pushing master branch to heroku
+
+heroku logs -t   //heroku server logs
+
+heroku run rails db:migrate     //need to run migration in heroku server
+heroku run rails c
+
+asset
+ //in root,html.erb
+window.staticImages = {
+  headerImage: "<%= asset_url "quotation_marks.png %>"
+}
+//change img src to window.staticImages.headerImage

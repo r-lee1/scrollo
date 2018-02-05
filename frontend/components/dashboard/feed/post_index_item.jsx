@@ -12,7 +12,7 @@ class PostIndexItem extends React.Component {
           <li>
             <div className="post">
               <h4 className="post-author">{this.props.post.author}</h4>
-              <h2>{this.props.post.title}</h2>
+              <h2 className="post-title">{this.props.post.title}</h2>
               <p className="post-body">{this.props.post.body}</p>
             </div>
           </li>

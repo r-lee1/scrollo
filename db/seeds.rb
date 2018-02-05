@@ -11,6 +11,7 @@ User.create(username: "spidey", email: "spidey@email.com", password: "password")
 User.create(username: "batman", email: "batman@email.com", password: "password")
 User.create(username: "baobao", email: "baobao@email.com", password: "password")
 User.create(username: "jengole", email: "jengole@email.com", password: "password")
+User.create(username: "guest", email: "guest@email.com", password: "password")
 
 Post.create(post_type: "photo", body: "Dream vacation", source: "http://res.cloudinary.com/dxyit2phe/image/upload/v1517798500/mjzgbjgfybkwfwexwxng.jpg", author_id: 2)
 Post.create(post_type: "photo", body: "Switzerland", source: "http://res.cloudinary.com/dxyit2phe/image/upload/v1517793003/raphael-biscaldi-344000_c9gvym.jpg", author_id: 2)

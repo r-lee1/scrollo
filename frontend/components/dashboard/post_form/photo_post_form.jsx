@@ -42,20 +42,20 @@ class PhotoPostForm extends React.Component {
 
   render() {
     return(
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            onChange={this.updateInput("source")}
-            placeholder="image url"
-            value={this.state.source}>
-          </input>
-          <button onClick={this.uploadImage}>Upload Image</button>
-          <img src={this.state.source} />
-          <textarea
-            onChange={this.updateInput("body")}
-            placeholder="Your text here"
-            value={this.state.body.value}/>
-          <button className="post-create-btn">Post</button>
+      <div className="post-form">
+        <form>
+          <div className="post-form-content">
+            <button className="upload-img-btn" onClick={this.uploadImage}>Upload Photo</button>
+            <img src={this.state.source} />
+            <textarea
+              onChange={this.updateInput("body")}
+              placeholder="Your text here"
+              value={this.state.body.value}/>
+          </div>
+          <div className="post-form-btn-bar">
+            <button className="post-form-btn-close">Close</button>
+            <button onClick={this.handleSubmit} className="post-form-btn-post">Post</button>
+          </div>
         </form>
       </div>
     );
@@ -63,3 +63,10 @@ class PhotoPostForm extends React.Component {
 }
 
 export default PhotoPostForm;
+
+
+// <input
+//   onChange={this.updateInput("source")}
+//   placeholder="image url"
+//   value={this.state.source}>
+// </input>

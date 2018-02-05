@@ -27,18 +27,23 @@ class TextPostForm extends React.Component {
 
   render() {
     return(
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            onChange={this.updateInput("title")}
-            placeholder="Title"
-            value={this.state.title}>
-          </input>
-          <textarea
-            onChange={this.updateInput("body")}
-            placeholder="Your text here"
-            value={this.state.body}/>
-          <button>Post</button>
+      <div className="post-form">
+        <form>
+          <div className="post-form-content">
+            <input
+              onChange={this.updateInput("title")}
+              placeholder="Title"
+              value={this.state.title}>
+            </input>
+            <textarea
+              onChange={this.updateInput("body")}
+              placeholder="Your text here"
+              value={this.state.body}/>
+          </div>
+          <div className="post-form-btn-bar">
+            <button className="post-form-btn-close">Close</button>
+            <button onClick={this.handleSubmit} className="post-form-btn-post">Post</button>
+          </div>
         </form>
       </div>
     );

@@ -74,9 +74,9 @@ class Dashboard extends React.Component {
               <span>Video</span>
           </Link>
         </button>
+        </ul>
         <ProtectedRoute exact path ="/new/text" component={TextPostFormContainer} />
         <ProtectedRoute exact path ="/new/photo" component={PhotoPostFormContainer} />
-        </ul>
         <PostIndexContainer props={this.props} />
       </div>
     );

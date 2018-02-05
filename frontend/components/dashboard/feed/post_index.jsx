@@ -27,7 +27,3 @@ class PostIndex extends React.Component {
 }
 
 export default PostIndex;
-
-
-//bug:
-//posts reversing everytime component is rendered
