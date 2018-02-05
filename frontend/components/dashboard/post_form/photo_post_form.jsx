@@ -32,7 +32,6 @@ class PhotoPostForm extends React.Component {
   uploadImage(e) {
     e.preventDefault();
     window.postImage = this.postImage.bind(this);
-    console.log(window.cloudinary);
     window.cloudinary.openUploadWidget(
       window.cloudinary_options,
       function(errors, result){

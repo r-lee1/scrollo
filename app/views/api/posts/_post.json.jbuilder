@@ -5,3 +5,4 @@ json.extract! post,
               :body,
               :source,
               :author_id
+json.author post.author.username

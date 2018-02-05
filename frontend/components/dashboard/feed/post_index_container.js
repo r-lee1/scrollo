@@ -6,7 +6,7 @@ import { fetchPosts } from '../../../actions/post_actions';
 
 const mapStateToProps = (state) => {
   return {
-    posts: Object.values(state.entities.posts)
+    posts: Object.values(state.entities.posts).reverse()
   };
 };
 

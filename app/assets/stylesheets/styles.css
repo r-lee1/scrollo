@@ -7,6 +7,11 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 0 15px;
+  height: 54px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
 .navbar button {
