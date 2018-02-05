@@ -4,10 +4,16 @@ import PhotoPostForm from './photo_post_form';
 
 import { createPost } from '../../../actions/post_actions';
 
+const mapStateToProps = (state) => {
+  return {
+    state: state
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     createPost: (post) => dispatch(createPost(post))
   };
 };
 
-export default connect(null, mapDispatchToProps)(PhotoPostForm);
+export default connect(mapStateToProps, mapDispatchToProps)(PhotoPostForm);

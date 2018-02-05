@@ -3,7 +3,6 @@ import React from 'react';
 class PhotoPostForm extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       post_type: "photo",
       source: "",
@@ -11,6 +10,7 @@ class PhotoPostForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.uploadImage = this.uploadImage.bind(this);
   }
 
   handleSubmit(e) {
@@ -25,6 +25,22 @@ class PhotoPostForm extends React.Component {
     };
   }
 
+  postImage(url) {
+    this.setState({ ["source"]: url });
+  }
+
+  uploadImage(e) {
+    e.preventDefault();
+    window.postImage = this.postImage.bind(this);
+    console.log(window.cloudinary);
+    window.cloudinary.openUploadWidget(
+      window.cloudinary_options,
+      function(errors, result){
+        window.postImage(result[0].url);
+      }
+    );
+  }
+
   render() {
     return(
       <div>
@@ -34,6 +50,7 @@ class PhotoPostForm extends React.Component {
             placeholder="image url"
             value={this.state.source}>
           </input>
+          <button onClick={this.uploadImage}>Upload Image</button>
           <img src={this.state.source} />
           <textarea
             onChange={this.updateInput("body")}
