@@ -32,12 +32,12 @@ class TextPostForm extends React.Component {
           <input
             onChange={this.updateInput("title")}
             placeholder="Title"
-            value={this.state.title.value}>
+            value={this.state.title}>
           </input>
           <textarea
             onChange={this.updateInput("body")}
             placeholder="Your text here"
-            value={this.state.body.value}/>
+            value={this.state.body}/>
           <button>Post</button>
         </form>
       </div>

@@ -1,6 +1,9 @@
 class Api::PostsController < ApplicationController
 
   def index
+    cloud_name = ENV['CLOUD_NAME']
+    upload_preset = Figaro.env.UPLOAD_PRESET
+    puts "API KEYS: #{cloud_name} #{upload_preset}"
     @posts = Post.all
     render 'api/posts/index'
   end
