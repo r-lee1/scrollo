@@ -55,7 +55,7 @@ class PhotoPostForm extends React.Component {
             onChange={this.updateInput("body")}
             placeholder="Your text here"
             value={this.state.body.value}/>
-          <button>Post</button>
+          <button className="post-create-btn">Post</button>
         </form>
       </div>
     );

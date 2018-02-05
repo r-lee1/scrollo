@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <ul className="post-navbar">
-          <button>
+          <button className="post-navbar-btn">
             <Link to="/new/text" style={{textDecoration: 'none'}}>
               <div>
                 <i className="fas fa-font"></i>
@@ -26,7 +26,7 @@ class Dashboard extends React.Component {
               <span>Text</span>
             </Link>
           </button>
-          <button>
+          <button className="post-navbar-btn">
             <Link to="/new/photo" style={{textDecoration: 'none'}}>
               <div>
                 <i className="fas fa-camera-retro"></i>
@@ -34,7 +34,7 @@ class Dashboard extends React.Component {
               <span>Photo</span>
             </Link>
           </button>
-          <button>
+          <button className="post-navbar-btn">
             <Link to="/new/quote" style={{textDecoration: 'none'}}>
               <div>
                 <i className="fas fa-quote-left"></i>
@@ -42,7 +42,7 @@ class Dashboard extends React.Component {
               <span>Quote</span>
           </Link>
         </button>
-          <button>
+          <button className="post-navbar-btn">
             <Link to="/new/link" style={{textDecoration: 'none'}}>
               <div>
                 <i className="fas fa-link"></i>
@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
               <span>Link</span>
           </Link>
         </button>
-          <button>
+          <button className="post-navbar-btn">
             <Link to="/new/chat" style={{textDecoration: 'none'}}>
               <div>
                 <i className="fas fa-comment-alt"></i>
@@ -58,7 +58,7 @@ class Dashboard extends React.Component {
               <span>Chat</span>
           </Link>
         </button>
-          <button>
+          <button className="post-navbar-btn">
             <Link to="/new/audio" style={{textDecoration: 'none'}}>
               <div>
                 <i className="fas fa-headphones "></i>
@@ -66,7 +66,7 @@ class Dashboard extends React.Component {
               <span>Audio</span>
           </Link>
         </button>
-          <button>
+          <button className="post-navbar-btn">
             <Link to="/new/video" style={{textDecoration: 'none'}}>
               <div>
                 <i className="fas fa-video"></i>

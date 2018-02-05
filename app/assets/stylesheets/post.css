@@ -1,0 +1,32 @@
+
+.post {
+  width: 540px;
+  font-size: 14px;
+  background: #fff;
+  padding: 15px 0 0;
+  word-wrap: break-word;
+  border-radius: 3px;
+  margin: 15px;
+}
+
+.post .post-author {
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  padding: 15px;
+}
+
+.post .post-photo {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.post .post-body {
+    font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 14px;
+    font-style: normal;
+    color: #444;
+    padding: 15px;
+}
