@@ -39,6 +39,11 @@
   margin: 0 auto;
 }
 
+.post .post-video {
+  display: block;
+  margin: 0 auto;
+}
+
 .post .post-title {
   font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
   font-weight: 400;

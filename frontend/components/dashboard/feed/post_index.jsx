@@ -13,18 +13,13 @@ class PostIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(this.props.posts.length);
-    console.log(nextProps.posts.length);
     if (this.props.posts.length !== nextProps.posts.length) {
       this.props.fetchPosts();
-      console.log("this props", this.props);
-      console.log("next props", nextProps);
-      console.log(nextProps.posts !== this.props.posts);
     }
   }
 
   render() {
-    console.log(this.props);
+    console.log(this.props.posts);
     return (
       <div>
         <ul className="feed">

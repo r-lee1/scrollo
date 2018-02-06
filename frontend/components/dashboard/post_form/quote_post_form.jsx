@@ -16,6 +16,11 @@ class QuotePostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createPost(this.state);
+    this.setState({
+      post_type: "quote",
+      body: "",
+      source: ""
+    });
 
   }
 

@@ -16,7 +16,11 @@ class PhotoPostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createPost(this.state);
-
+    this.setState({
+      post_type: "photo",
+      source: "",
+      body: ""
+    });
   }
 
   updateInput(field) {
@@ -51,7 +55,7 @@ class PhotoPostForm extends React.Component {
               className="post-form-text-body"
               onChange={this.updateInput("body")}
               placeholder="Your text here"
-              value={this.state.body.value}/>
+              value={this.state.body}/>
           </div>
           <div className="post-form-btn-bar">
             <button className="post-form-btn-close">Close</button>
