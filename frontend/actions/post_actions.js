@@ -35,6 +35,11 @@ export const createPost = (post) => (dispatch) => {
     .then((serverPost) => dispatch(receiveAPost(serverPost)));
 };
 
+export const updatePost = (post) => (dispatch) => {
+  return PostApiUtil.updatePost(post)
+    .then((serverPost) => dispatch(receiveAPost(serverPost)));
+};
+
 export const deletePost = (postId) => (dispatch) => {
   return PostApiUtil.deletePost(postId)
     .then((serverPost) => dispatch(removeAPost(serverPost)));

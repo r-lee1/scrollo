@@ -24,7 +24,7 @@
 
 .post .post-util-bar button {
   font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   margin-right: 10px;
   background-color: #fff;
@@ -33,6 +33,38 @@
   outline: none;
   cursor: pointer;
 }
+
+.post .post-likes-bar {
+  height: 30px;
+}
+
+.post .post-likes-bar .post-edit-btn {
+  font-weight: 400;
+  font-size: 18px;
+  background-color: #fff;
+  border: none;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 505px;
+  width: 18px;
+  height: 18px;
+}
+
+.post .post-likes-bar .post-like-btn {
+  display: relative;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: #fff;
+  border: none;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 498px;
+  width: 30px;
+  height: 27px;
+}
+
 
 .post .post-photo {
   max-width: 100%;

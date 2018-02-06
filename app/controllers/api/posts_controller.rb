@@ -17,6 +17,16 @@ class Api::PostsController < ApplicationController
 
   end
 
+  def update
+    @post = current_user.authored_posts.find(params[:id])
+    
+    if @post.update(post_params)
+      render 'api/posts/post'
+    else
+      render json: @post.errors.full_messages, status: 422
+    end
+  end
+
   def destroy
     @post = current_user.authored_posts.find(params[:id])
     @post.destroy

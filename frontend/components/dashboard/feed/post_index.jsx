@@ -26,6 +26,7 @@ class PostIndex extends React.Component {
               post => { return <PostIndexItem
                                   key={post.id}
                                   post={post}
+                                  currentUser={this.props.currentUser}
                                   deletePost={this.props.deletePost}/>;}
             )}
         </ul>

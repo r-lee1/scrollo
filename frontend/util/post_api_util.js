@@ -12,9 +12,17 @@ export const createPost = (newPost) => {
   });
 };
 
+export const updatePost = (updatedPost) => {
+  return $.ajax({
+    url: `/api/posts/${updatedPost.id}`,
+    method: 'PATCH',
+    data: { post: updatedPost}
+  });
+};
+
 export const deletePost = (postId) => {
   return $.ajax({
-      url: `api/posts/${postId}`,
+      url: `/api/posts/${postId}`,
       method: 'DELETE'
   });
 };

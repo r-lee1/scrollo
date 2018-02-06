@@ -71,12 +71,18 @@ class Dashboard extends React.Component {
           </Link>
         </button>
         </ul>
-        <ProtectedRoute exact path ="/new/text" component={TextPostFormContainer} />
-        <ProtectedRoute exact path ="/new/photo" component={PhotoPostFormContainer} />
-        <ProtectedRoute exact path ="/new/quote" component={QuotePostFormContainer} />
-        <ProtectedRoute exact path ="/new/video" component={VideoPostFormContainer} />
-        <ProtectedRoute exact path ="/new/link" component={LinkPostFormContainer} />
-        <ProtectedRoute exact path ="/new/audio" component={AudioPostFormContainer} />
+        <ProtectedRoute exact path="/new/text" component={TextPostFormContainer} />
+        <ProtectedRoute exact path="/edit/text/:postId" component={TextPostFormContainer} />
+        <ProtectedRoute exact path="/new/photo" component={PhotoPostFormContainer} />
+        <ProtectedRoute exact path="/edit/photo/:postId" component={PhotoPostFormContainer} />
+        <ProtectedRoute exact path="/new/quote" component={QuotePostFormContainer} />
+        <ProtectedRoute exact path="/edit/quote/:postId" component={QuotePostFormContainer} />
+        <ProtectedRoute exact path="/new/link" component={LinkPostFormContainer} />
+        <ProtectedRoute exact path="/edit/link/:postId" component={LinkPostFormContainer} />
+        <ProtectedRoute exact path="/new/audio" component={AudioPostFormContainer} />
+        <ProtectedRoute exact path="/edit/audio/:postId" component={AudioPostFormContainer} />
+        <ProtectedRoute exact path="/new/video" component={VideoPostFormContainer} />
+        <ProtectedRoute exact path="/edit/video/:postId" component={VideoPostFormContainer} />
         <PostIndexContainer props={this.props} />
       </div>
     );

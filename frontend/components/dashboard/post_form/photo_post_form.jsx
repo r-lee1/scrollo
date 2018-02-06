@@ -1,13 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PhotoPostForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      post_type: "photo",
-      source: "",
-      body: ""
-    };
+
+    if (props.match.path === "/edit/photo/:postId") {
+      this.state = this.props.post;
+    } else {
+      this.state = {
+        post_type: "photo",
+        source: "",
+        body: ""
+      };
+    }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.uploadImage = this.uploadImage.bind(this);
@@ -15,12 +21,7 @@ class PhotoPostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPost(this.state);
-    this.setState({
-      post_type: "photo",
-      source: "",
-      body: ""
-    });
+    this.props.actionPost(this.state).then(() => this.props.history.push('/'));
   }
 
   updateInput(field) {
@@ -58,8 +59,8 @@ class PhotoPostForm extends React.Component {
               value={this.state.body}/>
           </div>
           <div className="post-form-btn-bar">
-            <button className="post-form-btn-close">Close</button>
-            <button onClick={this.handleSubmit} className="post-form-btn-post">Post</button>
+            <Link to="/"><button className="post-form-btn-close">Close</button></Link>
+            <button onClick={this.handleSubmit} className="post-form-btn-post">{this.props.actionButton}</button>
           </div>
         </form>
       </div>

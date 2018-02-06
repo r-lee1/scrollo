@@ -1,26 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class TextPostForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      post_type: "text",
-      title: "",
-      body: ""
-    };
+    if (props.match.path === "/edit/text/:postId") {
+      this.state = this.props.post;
+    } else {
+      this.state = {
+        post_type: "text",
+        title: "",
+        body: ""
+      };
+    }
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPost(this.state);
-    this.setState({
-      post_type: "text",
-      title: "",
-      body: ""
-    });
+    this.props.actionPost(this.state).then(() => this.props.history.push('/'));
   }
 
   updateInput(field) {
@@ -47,8 +47,12 @@ class TextPostForm extends React.Component {
               value={this.state.body}/>
           </div>
           <div className="post-form-btn-bar">
-            <button className="post-form-btn-close">Close</button>
-            <button onClick={this.handleSubmit} className="post-form-btn-post">Post</button>
+            <Link to="/"><button className="post-form-btn-close">Close</button></Link>
+            <button
+              onClick={this.handleSubmit}
+              className="post-form-btn-post">
+              {this.props.actionButton}
+              </button>
           </div>
         </form>
       </div>
