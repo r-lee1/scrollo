@@ -17,6 +17,12 @@ class Api::PostsController < ApplicationController
 
   end
 
+  def destroy
+    @post = current_user.authored_posts.find(params[:id])
+    @post.destroy
+    render 'api/posts/post'
+  end
+
   private
 
   def post_params

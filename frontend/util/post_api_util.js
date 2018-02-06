@@ -11,3 +11,10 @@ export const createPost = (newPost) => {
     data: { post: newPost }
   });
 };
+
+export const deletePost = (postId) => {
+  return $.ajax({
+      url: `api/posts/${postId}`,
+      method: 'DELETE'
+  });
+};

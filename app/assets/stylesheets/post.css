@@ -1,21 +1,36 @@
 .feed {
-  
+
 }
 
 .post {
   width: 540px;
   font-size: 14px;
   background: #fff;
-  padding: 15px 0 0;
   word-wrap: break-word;
   border-radius: 3px;
   margin: 15px;
+}
+
+.post .post-util-bar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .post .post-author {
   font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 600;
   padding: 18px;
+}
+
+.post .post-util-bar button {
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: #fff;
+  border: none;
+  border-style: none;
+  outline: none;
 }
 
 .post .post-photo {
