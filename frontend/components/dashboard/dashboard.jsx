@@ -3,6 +3,7 @@ import PostIndexContainer from './feed/post_index_container';
 import TextPostFormContainer from './post_form/text_post_form_container';
 import PhotoPostFormContainer from './post_form/photo_post_form_container';
 import QuotePostFormContainer from './post_form/quote_post_form_container';
+import LinkPostFormContainer from './post_form/link_post_form_container';
 import VideoPostFormContainer from './post_form/video_post_form_container';
 import { Link, Route } from 'react-router-dom';
 
@@ -81,6 +82,7 @@ class Dashboard extends React.Component {
         <ProtectedRoute exact path ="/new/photo" component={PhotoPostFormContainer} />
         <ProtectedRoute exact path ="/new/quote" component={QuotePostFormContainer} />
         <ProtectedRoute exact path ="/new/video" component={VideoPostFormContainer} />
+        <ProtectedRoute exact path ="/new/link" component={LinkPostFormContainer} />
         <PostIndexContainer props={this.props} />
       </div>
     );

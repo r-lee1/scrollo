@@ -31,6 +31,7 @@
   border: none;
   border-style: none;
   outline: none;
+  cursor: pointer;
 }
 
 .post .post-photo {
@@ -81,4 +82,24 @@
   font-style: normal;
   color: #444;
   padding: 18px;
+  right: 450px;
+}
+
+.post .post-link {
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  font-style: italic;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.post .post-link a {
+  color: rgb(105,105,105);
+  text-decoration: none;
+}
+
+.post .post-link a:hover {
+  color: rgb(105,105,105);
+  text-decoration: underline;
 }

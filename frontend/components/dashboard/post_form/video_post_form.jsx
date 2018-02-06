@@ -37,7 +37,7 @@ class VideoPostForm extends React.Component {
     e.preventDefault();
     window.postImage = this.postImage.bind(this);
     window.cloudinary.openUploadWidget(
-      window.cloudinary_options,
+      window.cloudinary_video_options,
       function(errors, result){
         window.postImage(result[0].url);
       }

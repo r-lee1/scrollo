@@ -88,6 +88,31 @@
   outline: none;
 }
 
+.post-form .post-form-content .post-form-link-url {
+  padding: 20px 15px;
+  font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border: none;
+  border-style: none;
+  outline: none;
+  resize: none;
+  word-wrap: break-word;
+}
+
+.post-form .post-form-content .post-form-link-description {
+  padding: 15px 15px;
+  font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  border-style: none;
+  resize: none;
+}
+
 .post-form .post-form-btn-bar {
   display: flex;
   margin: 15px;

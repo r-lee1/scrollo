@@ -13,6 +13,11 @@
         cloud_name: '<%= ENV['CLOUD_NAME'] %>',
         upload_preset: '<%= ENV['UPLOAD_PRESET'] %>'
       };
+      window.cloudinary_video_options = {
+        cloud_name: '<%= ENV['CLOUD_NAME'] %>',
+        upload_preset: '<%= ENV['UPLOAD_PRESET'] %>',
+        sources: ["local"]
+      };
     </script>
     <% if current_user %>
     <script>

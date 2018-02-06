@@ -52,6 +52,20 @@ class PostIndexItem extends React.Component {
           </div>
         </li>
       );
+    } else if (this.props.post.post_type === "link") {
+      return (
+        <li>
+          <div className="post">
+            <div className="post-util-bar">
+              <h4 className="post-author">{this.props.post.author}</h4>
+              <button className="post-delete-btn" onClick={this.removePost}>X</button>
+            </div>
+            <div className="post-link">
+              <a href={this.props.post.source}>{this.props.post.body}</a>
+            </div>
+          </div>
+        </li>
+      );
     } else if (this.props.post.post_type === "video") {
       return (
         <li>
