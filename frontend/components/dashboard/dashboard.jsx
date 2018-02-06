@@ -4,6 +4,7 @@ import TextPostFormContainer from './post_form/text_post_form_container';
 import PhotoPostFormContainer from './post_form/photo_post_form_container';
 import QuotePostFormContainer from './post_form/quote_post_form_container';
 import LinkPostFormContainer from './post_form/link_post_form_container';
+import AudioPostFormContainer from './post_form/audio_post_form_container';
 import VideoPostFormContainer from './post_form/video_post_form_container';
 import { Link, Route } from 'react-router-dom';
 
@@ -54,14 +55,6 @@ class Dashboard extends React.Component {
           </Link>
         </button>
           <button className="post-navbar-btn">
-            <Link to="/new/chat" style={{textDecoration: 'none'}}>
-              <div>
-                <i className="fas fa-comment-alt"></i>
-              </div>
-              <span>Chat</span>
-          </Link>
-        </button>
-          <button className="post-navbar-btn">
             <Link to="/new/audio" style={{textDecoration: 'none'}}>
               <div>
                 <i className="fas fa-headphones "></i>
@@ -83,6 +76,7 @@ class Dashboard extends React.Component {
         <ProtectedRoute exact path ="/new/quote" component={QuotePostFormContainer} />
         <ProtectedRoute exact path ="/new/video" component={VideoPostFormContainer} />
         <ProtectedRoute exact path ="/new/link" component={LinkPostFormContainer} />
+        <ProtectedRoute exact path ="/new/audio" component={AudioPostFormContainer} />
         <PostIndexContainer props={this.props} />
       </div>
     );
@@ -91,3 +85,13 @@ class Dashboard extends React.Component {
 }
 
 export default Dashboard;
+
+
+// <button className="post-navbar-btn">
+//   <Link to="/new/chat" style={{textDecoration: 'none'}}>
+//     <div>
+//       <i className="fas fa-comment-alt"></i>
+//     </div>
+//     <span>Chat</span>
+// </Link>
+// </button>

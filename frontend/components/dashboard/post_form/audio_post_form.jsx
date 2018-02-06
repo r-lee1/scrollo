@@ -1,10 +1,10 @@
 import React from 'react';
 
-class VideoPostForm extends React.Component {
+class AudioPostForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      post_type: "video",
+      post_type: "audio",
       source: "",
       body: ""
     };
@@ -17,7 +17,7 @@ class VideoPostForm extends React.Component {
     e.preventDefault();
     this.props.createPost(this.state);
     this.setState({
-      post_type: "video",
+      post_type: "audio",
       source: "",
       body: ""
     });
@@ -49,10 +49,10 @@ class VideoPostForm extends React.Component {
       <div className="post-form">
         <form>
           <div className="post-form-content">
-            <button className="upload-img-btn" onClick={this.uploadMedia}>Upload Video</button>
-            <video width="320" height="240" controls>
+            <button className="upload-img-btn" onClick={this.uploadMedia}>Upload Audio</button>
+            <audio controls>
               <source src={this.state.source}/>
-            </video>
+            </audio>
             <textarea
               className="post-form-text-body"
               onChange={this.updateInput("body")}
@@ -69,4 +69,4 @@ class VideoPostForm extends React.Component {
   }
 }
 
-export default VideoPostForm;
+export default AudioPostForm;
