@@ -2,6 +2,7 @@ import React from 'react';
 import PostIndexContainer from './feed/post_index_container';
 import TextPostFormContainer from './post_form/text_post_form_container';
 import PhotoPostFormContainer from './post_form/photo_post_form_container';
+import QuotePostFormContainer from './post_form/quote_post_form_container';
 import { Link, Route } from 'react-router-dom';
 
 import {
@@ -77,6 +78,7 @@ class Dashboard extends React.Component {
         </ul>
         <ProtectedRoute exact path ="/new/text" component={TextPostFormContainer} />
         <ProtectedRoute exact path ="/new/photo" component={PhotoPostFormContainer} />
+        <ProtectedRoute exact path ="/new/quote" component={QuotePostFormContainer} />
         <PostIndexContainer props={this.props} />
       </div>
     );

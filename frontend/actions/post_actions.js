@@ -21,7 +21,7 @@ const receiveAPost = (post) => {
 const removeAPost = (post) => {
   return ({
     type: REMOVE_A_POST,
-    post
+    postId: post.id
   });
 };
 

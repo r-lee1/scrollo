@@ -48,6 +48,7 @@ class PhotoPostForm extends React.Component {
             <button className="upload-img-btn" onClick={this.uploadImage}>Upload Photo</button>
             <img src={this.state.source} />
             <textarea
+              className="post-form-text-body"
               onChange={this.updateInput("body")}
               placeholder="Your text here"
               value={this.state.body.value}/>

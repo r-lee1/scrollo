@@ -41,8 +41,8 @@
   width: 100%;
 }
 
-.post-form .post-form-content input {
-  padding: 0 15px;
+.post-form .post-form-content .post-form-text-title {
+  padding: 15px;
   font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -52,16 +52,40 @@
   outline: none;
 }
 
-.post-form .post-form-content textarea {
-  padding: 15px;
+.post-form .post-form-content .post-form-text-body {
+  padding: 25px 15px;
   font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 47px;
+  line-height: 24px;
   border: none;
   outline: none;
   border-style: none;
   resize: none;
+}
+
+.post-form .post-form-content .post-form-quote-body {
+  padding: 25px 15px;
+  font-family: Garamond, georgia, serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 35px;
+  color: #343434;
+  border: none;
+  outline: none;
+  border-style: none;
+  resize: none;
+}
+
+.post-form .post-form-content .post-form-quote-source {
+  padding: 0 15px;
+  font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4px;
+  border: none;
+  border-style: none;
+  outline: none;
 }
 
 .post-form .post-form-btn-bar {

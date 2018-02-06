@@ -57,3 +57,23 @@
     color: #444;
     padding: 18px;
 }
+
+.post .post-quote-body {
+  font-family: Garamond, georgia, serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1.4;
+  color: #343434;
+  padding: 18px;
+  text-align: center;
+}
+
+.post .post-quote-source {
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 14px;
+  font-style: normal;
+  color: #444;
+  padding: 18px;
+}

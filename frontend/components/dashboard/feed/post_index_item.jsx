@@ -26,7 +26,7 @@ class PostIndexItem extends React.Component {
             </div>
           </li>
         );
-    } else {
+    } else if (this.props.post.post_type === "photo"){
       return (
           <li>
             <div className="post">
@@ -39,9 +39,22 @@ class PostIndexItem extends React.Component {
             </div>
           </li>
         );
-    }
+    } else if (this.props.post.post_type === "quote") {
+      return (
+        <li>
+          <div className="post">
+            <div className="post-util-bar">
+              <h4 className="post-author">{this.props.post.author}</h4>
+              <button className="post-delete-btn" onClick={this.removePost}>X</button>
+            </div>
+            <h2 className="post-quote-body">{`"${this.props.post.body}"`}</h2>
+            <p className="post-quote-source">{`- ${this.props.post.source}`}</p>
+          </div>
+        </li>
+      );
     }
   }
+}
 
 
 

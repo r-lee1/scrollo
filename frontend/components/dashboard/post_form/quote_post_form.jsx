@@ -1,13 +1,13 @@
 import React from 'react';
 
-class TextPostForm extends React.Component {
+class QuotePostForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      post_type: "text",
-      title: "",
-      body: ""
+      post_type: "quote",
+      body: "",
+      source: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,17 +30,17 @@ class TextPostForm extends React.Component {
       <div className="post-form">
         <form>
           <div className="post-form-content">
-            <input
-              className="post-form-text-title"
-              onChange={this.updateInput("title")}
-              placeholder="Title"
-              value={this.state.title}>
-            </input>
             <textarea
-              className="post-form-text-body"
+              className="post-form-quote-body"
               onChange={this.updateInput("body")}
-              placeholder="Your text here"
+              placeholder="Quote"
               value={this.state.body}/>
+            <input
+              className="post-form-quote-source"
+              onChange={this.updateInput("source")}
+              placeholder="Source"
+              value={this.state.source}>
+            </input>
           </div>
           <div className="post-form-btn-bar">
             <button className="post-form-btn-close">Close</button>
@@ -52,4 +52,4 @@ class TextPostForm extends React.Component {
   }
 }
 
-export default TextPostForm;
+export default QuotePostForm;
