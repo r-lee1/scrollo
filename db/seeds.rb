@@ -19,3 +19,4 @@ Post.create(post_type: "text", title: "1914 translation by H. Rackham", body: "L
 Post.create(post_type: "photo", body: "Spiaggia delle Cannelle, Italy", source: "http://res.cloudinary.com/dxyit2phe/image/upload/v1517616576/luca-baggio-211858_qkqeqq.jpg", author_id: 5)
 Post.create(post_type: "photo", body: "Bangkok, Thailand", source: "http://res.cloudinary.com/dxyit2phe/image/upload/v1517616562/sam-beasley-500154_ujwwt2.jpg", author_id: 1)
 Post.create(post_type: "photo", body: "Serenity", source: "http://res.cloudinary.com/dxyit2phe/image/upload/v1517798120/baroyv0m1tsuftdbrc3p.jpg", author_id: 4)
+Post.create(post_type: "photo", body: "Chillin'", source: "http://res.cloudinary.com/dxyit2phe/image/upload/v1517962105/vp0cqevldggpec7mx958.jpg", author_id: 4)
