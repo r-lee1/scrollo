@@ -33,14 +33,6 @@ class PostIndexItem extends React.Component {
     }
   }
 
-  topFunction() {
-      window.scroll({
-      top: 150,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
-
   editButtonVisible(postType) {
     if (this.props.currentUser.id === this.props.post.author_id) {
       return (
@@ -53,6 +45,14 @@ class PostIndexItem extends React.Component {
         <button className="post-like-btn"><i className="far fa-heart"></i></button>
       );
     }
+  }
+
+  topFunction() {
+      window.scroll({
+      top: 150,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   render() {

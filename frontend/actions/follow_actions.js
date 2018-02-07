@@ -1,0 +1,10 @@
+import * as FollowApiUtil from '../util/follow_api_util';
+
+export const RECEIVE_FOLLOW_USERS = "RECEIVE_FOLLOW_USERS";
+
+const receiveFollowUsers = (followUsers) => {
+  return ({
+    type: RECEIVE_FOLLOW_USERS,
+    followUsers
+  });
+};

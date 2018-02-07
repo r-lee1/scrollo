@@ -11,6 +11,24 @@ class User < ApplicationRecord
     primary_key: :id
   )
 
+  has_many(
+    :user_to_followee_follows,
+    class_name: 'Follow',
+    foreign_key: :follower_id,
+    primary_key: :id
+  )
+
+  has_many :followees, through: :user_to_followee_follows, source: :followee
+
+  has_many(
+    :follower_to_user_follows,
+    class_name: 'Follow',
+    foreign_key: :followee_id,
+    primary_key: :id
+  )
+
+  has_many :followers, through: :follower_to_user_follows, source: :follower
+
   attr_reader :password
 
   def self.find_by_credentials(email, password)
