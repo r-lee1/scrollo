@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import { createPost } from './actions/post_actions';
+import { fetchFollowUsers } from './actions/follow_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById("root");
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.createPost = createPost;
+  window.fetchFollowUsers = fetchFollowUsers;
 
   ReactDOM.render(<Root store={store} />, root);
 });
