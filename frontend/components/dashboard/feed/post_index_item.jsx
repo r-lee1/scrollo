@@ -15,6 +15,7 @@ class PostIndexItem extends React.Component {
     this.removePost = this.removePost.bind(this);
     this.editButtonVisible = this.editButtonVisible.bind(this);
     this.deleteButtonVisible = this.deleteButtonVisible.bind(this);
+    this.topFunction = this.topFunction.bind(this);
   }
 
   removePost(e) {
@@ -32,11 +33,19 @@ class PostIndexItem extends React.Component {
     }
   }
 
+  topFunction() {
+      window.scroll({
+      top: 150,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   editButtonVisible(postType) {
     if (this.props.currentUser.id === this.props.post.author_id) {
       return (
         <Link to={`/edit/${postType}/${this.props.post.id}`}>
-          <button className="post-edit-btn"><i className="fas fa-cog"></i></button>
+          <button onClick={this.topFunction} className="post-edit-btn"><i className="fas fa-cog"></i></button>
         </Link>
       );
     } else {
