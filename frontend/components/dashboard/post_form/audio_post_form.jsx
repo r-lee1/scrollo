@@ -51,9 +51,9 @@ class AudioPostForm extends React.Component {
         <form>
           <div className="post-form-content">
             <button className="upload-img-btn" onClick={this.uploadMedia}>Upload Audio</button>
-            <audio controls>
+            {this.state.source.length > 0 && <audio className="post-form-audio-preview"controls>
               <source src={this.state.source}/>
-            </audio>
+            </audio>}
             <textarea
               className="post-form-text-body"
               onChange={this.updateInput("body")}

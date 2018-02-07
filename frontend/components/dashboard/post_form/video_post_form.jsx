@@ -9,7 +9,7 @@ class VideoPostForm extends React.Component {
     } else {
       this.state = {
         post_type: "video",
-        title: "",
+        source: "",
         body: ""
       };
     }
@@ -50,9 +50,9 @@ class VideoPostForm extends React.Component {
         <form>
           <div className="post-form-content">
             <button className="upload-img-btn" onClick={this.uploadMedia}>Upload Video</button>
-            <video width="320" height="240" controls>
+            {this.state.source.length > 0 && <video className="post-form-video-preview" width="280" height="210" controls>
               <source src={this.state.source}/>
-            </video>
+            </video>}
             <textarea
               className="post-form-text-body"
               onChange={this.updateInput("body")}

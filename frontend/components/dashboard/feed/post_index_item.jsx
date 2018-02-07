@@ -129,7 +129,7 @@ class PostIndexItem extends React.Component {
               <h4 className="post-author">{this.props.post.author}</h4>
               {this.deleteButtonVisible()}
             </div>
-            <audio controls>
+            <audio className="post-audio" controls>
               <source src={this.props.post.source}/>
             </audio>
             <p className="post-body">{this.props.post.body}</p>
