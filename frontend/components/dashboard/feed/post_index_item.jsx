@@ -1,12 +1,7 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import TextPostFormContainer from '../post_form/text_post_form_container';
-
-import {
-  AuthRoute,
-  ProtectedRoute
-} from '../../../util/route_utils';
+import { deleteFollow } from '../../../util/follow_api_util';
 
 class PostIndexItem extends React.Component {
   constructor(props) {
@@ -15,6 +10,7 @@ class PostIndexItem extends React.Component {
     this.removePost = this.removePost.bind(this);
     this.editButtonVisible = this.editButtonVisible.bind(this);
     this.deleteButtonVisible = this.deleteButtonVisible.bind(this);
+    this.removeFollow = this.removeFollow.bind(this);
     this.topFunction = this.topFunction.bind(this);
   }
 
@@ -23,13 +19,20 @@ class PostIndexItem extends React.Component {
     this.props.deletePost(this.props.post.id);
   }
 
+  removeFollow(e) {
+    e.preventDefault();
+    this.props.deleteFollow(this.props.post.current_user_to_author_follow[0].id).then(this.props.fetchPosts);
+  }
+
   deleteButtonVisible() {
     if (this.props.currentUser.id === this.props.post.author_id) {
       return (
         <button className="post-delete-btn" onClick={this.removePost}>X</button>
       );
     } else {
-      return null;
+      return (
+        <button className="post-unfollow-btn" onClick={this.removeFollow}>Unfollow</button>
+      );
     }
   }
 

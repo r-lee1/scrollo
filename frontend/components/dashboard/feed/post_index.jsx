@@ -27,7 +27,9 @@ class PostIndex extends React.Component {
                                   key={post.id}
                                   post={post}
                                   currentUser={this.props.currentUser}
-                                  deletePost={this.props.deletePost}/>;}
+                                  deletePost={this.props.deletePost}
+                                  deleteFollow={this.props.deleteFollow}
+                                  fetchPosts={this.props.fetchPosts}/>;}
             )}
         </ul>
       </div>

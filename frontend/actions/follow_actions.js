@@ -18,3 +18,8 @@ export const createFollow = (follow) => (dispatch) => {
   return FollowApiUtil.createFollow(follow)
     .then((serverFollowUsers) => dispatch(receiveFollowUsers(serverFollowUsers)));
 };
+
+export const deleteFollow = (followId) => (dispatch) => {
+  return FollowApiUtil.deleteFollow(followId)
+    .then((serverFollowUsers) => dispatch(receiveFollowUsers(serverFollowUsers)));
+};

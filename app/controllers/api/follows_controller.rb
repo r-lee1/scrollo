@@ -22,7 +22,15 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    
+    @follow = Follow.find(params[:id])
+    if @follow
+      @follow.destroy
+      followed_users = current_user.followees.pluck(:id)
+      followed_users << current_user.id
+      @follow_users = User.where.not(id: followed_users)
+      @follow_users = @follow_users.sample(5)
+      render 'api/users/follow_user_index'
+    end
   end
 
   private

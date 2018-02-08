@@ -7,6 +7,8 @@ import {
   deletePost,
   updatePost } from '../../../actions/post_actions';
 
+import { deleteFollow } from '../../../actions/follow_actions';
+
 const mapStateToProps = (state) => {
   return {
     posts: Object.values(state.entities.posts).reverse(),
@@ -17,7 +19,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
   fetchPosts: () => dispatch(fetchPosts()),
   deletePost: (postId) => dispatch(deletePost(postId)),
-  updatePost: (post) => dispatch(updatePost(post))
+  updatePost: (post) => dispatch(updatePost(post)),
+  deleteFollow: (postId) => dispatch(deleteFollow(postId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostIndex);

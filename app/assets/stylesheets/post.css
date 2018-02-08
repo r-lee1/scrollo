@@ -19,7 +19,7 @@
   padding: 18px;
 }
 
-.post .post-util-bar button {
+.post .post-util-bar .post-delete-btn {
   font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -29,6 +29,23 @@
   border-style: none;
   outline: none;
   cursor: pointer;
+}
+
+.post .post-util-bar .post-unfollow-btn {
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(72, 138, 194);
+  margin-right: 10px;
+  background-color: #fff;
+  border: none;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.post .post-util-bar button:hover {
+  color: rgba(255, 0, 0, 0.8)
 }
 
 .post .post-likes-bar {
