@@ -36,7 +36,7 @@ class LinkPostForm extends React.Component {
             <textarea
               className="post-form-link-url"
               onChange={this.updateInput("source")}
-              placeholder="URL"
+              placeholder="Insert URL"
               value={this.state.source}
             />
             <textarea

@@ -65,7 +65,7 @@ class PostIndexItem extends React.Component {
                 {this.deleteButtonVisible()}
               </div>
               <h2 className="post-title">{this.props.post.title}</h2>
-              <p className="post-body">{this.props.post.body}</p>
+              <p className="post-body-centered">{this.props.post.body}</p>
               <div className="post-likes-bar">
                 {this.editButtonVisible(this.props.post.post_type)}
               </div>
