@@ -13,3 +13,8 @@ export const fetchFollowUsers = () => (dispatch) => {
   return FollowApiUtil.getFollowUsers()
     .then((serverFollowUsers) => dispatch(receiveFollowUsers(serverFollowUsers)));
 };
+
+export const createFollow = (follow) => (dispatch) => {
+  return FollowApiUtil.createFollow(follow)
+    .then((serverFollowUsers) => dispatch(receiveFollowUsers(serverFollowUsers)));
+};

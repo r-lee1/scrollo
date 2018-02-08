@@ -11,12 +11,14 @@ class Api::FollowsController < ApplicationController
   def create
     @follow = Follow.new(follow_params)
     if @follow.save
-      current_user
-      render
+      followed_users = current_user.followees.pluck(:id)
+      followed_users << current_user.id
+      @follow_users = User.where.not(id: followed_users)
+      @follow_users = @follow_users.sample(5)
+      render 'api/users/follow_user_index'
     else
       render json: @follow.errors.full_messages
     end
-
   end
 
   private
@@ -26,3 +28,4 @@ class Api::FollowsController < ApplicationController
   end
 
 end
+# [5, 6, 21, 8, 10, 22, 15, 17]

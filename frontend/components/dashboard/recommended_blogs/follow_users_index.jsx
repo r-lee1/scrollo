@@ -16,7 +16,11 @@ class FollowUsersIndex extends React.Component {
         <h3 className="recommended-blogs-heading">RECOMMENDED BLOGS</h3>
         {this.props.followUsers.map(
           user => {
-          return <FollowUsersIndexItem key={user.id} user={user} />;}
+          return <FollowUsersIndexItem
+                  key={user.id}
+                  user={user}
+                  createFollow={this.props.createFollow}
+                  currentUser={this.props.currentUser} />;}
         )}
       </ul>
     );
