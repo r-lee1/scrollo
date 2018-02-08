@@ -1,0 +1,58 @@
+.right-side-bar {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding-right: 20px;
+  max-height: 243px;
+  width: 270px;
+}
+
+.recommended-blogs {
+  width: 80%;
+}
+
+.recommended-blogs .recommended-blogs-heading {
+  margin: 0 auto;
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  color: rgba(185,185,185, 0.5);
+  border-bottom: 2px solid rgba(100,100,100, 0.6);
+}
+
+.recommended-blogs .follow-users-item {
+  height: 25px;
+  padding: 10px;
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(195,195,195, 0.8);
+  border-bottom: 1px solid rgba(130,130,130, 0.5);
+}
+
+.recommended-blogs .follow-users-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.recommended-blogs .follow-users-item-username {
+  margin-right: 20px;
+}
+
+.recommended-blogs .follow-users-item-btn {
+  background-color: #36465d;
+  color: rgba(195,195,195, 0.8);
+  font-size: 20px;
+  border: none;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 0;
+  width: 23px;
+  height: 23px;
+  margin-left: 20px;
+}

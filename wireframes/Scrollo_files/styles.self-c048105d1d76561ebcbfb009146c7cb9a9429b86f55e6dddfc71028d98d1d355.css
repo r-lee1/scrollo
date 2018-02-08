@@ -1,0 +1,114 @@
+body {
+  background-color: #36465d;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15px;
+  height: 54px;
+  width: 100%;
+  border-bottom: 1px solid rgba(120,120,120, 0.8);
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.navbar-greeting {
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ddd;
+  padding-right: 30px;
+}
+
+.navbar button {
+  display: inline-block;
+  box-sizing: border-box;
+  color: #444;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 5px 7px;
+  margin: 15px 8px 15px 8px;
+  border-radius: 2px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+.logo {
+  font-size: 56px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  width: 232px;
+  height: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+.session-form-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 740px;
+  height: 500px;
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.session-form-input {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.session-form-input input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+
+}
+
+.session-form-btn {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.session-form-btn button {
+  width: 100%;
+  cursor: pointer;
+  padding: 12px;
+  margin-bottom: 3px;
+  border-radius: 2px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: rgb(82, 158, 204);
+  color: white;
+  border: none;
+}
+
+.errors-container {
+  font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+
+}

@@ -157,6 +157,11 @@
 .post-form .post-form-btn-bar .post-form-btn-close {
   background-color: rgb(157, 166, 175);
 }
+
 .post-form .post-form-btn-bar .post-form-btn-post {
   background-color: rgb(82, 158, 204);
+}
+
+.post-form .post-form-btn-bar .post-form-btn-post-hidden {
+  display: none;
 }

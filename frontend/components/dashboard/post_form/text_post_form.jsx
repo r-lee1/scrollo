@@ -16,6 +16,7 @@ class TextPostForm extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.postButtonVisible = this.postButtonVisible.bind(this);
   }
 
   handleSubmit(e) {
@@ -27,6 +28,14 @@ class TextPostForm extends React.Component {
     return (e) => {
       this.setState({ [field]: e.target.value });
     };
+  }
+
+  postButtonVisible() {
+    if (this.state.title === "" && this.state.body === "") {
+      return "post-form-btn-post-hidden";
+    } else {
+      return "post-form-btn-post";
+    }
   }
 
   render() {
@@ -50,7 +59,7 @@ class TextPostForm extends React.Component {
             <Link to="/"><button className="post-form-btn-close">Close</button></Link>
             <button
               onClick={this.handleSubmit}
-              className="post-form-btn-post">
+              className={this.postButtonVisible()}>
               {this.props.actionButton}
               </button>
           </div>

@@ -16,6 +16,7 @@ class VideoPostForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.uploadMedia = this.uploadMedia.bind(this);
+    this.postButtonVisible = this.postButtonVisible.bind(this);
   }
 
   handleSubmit(e) {
@@ -44,6 +45,14 @@ class VideoPostForm extends React.Component {
     );
   }
 
+  postButtonVisible() {
+    if (this.state.source === "") {
+      return "post-form-btn-post-hidden";
+    } else {
+      return "post-form-btn-post";
+    }
+  }
+
   render() {
     return(
       <div className="post-form">
@@ -61,7 +70,7 @@ class VideoPostForm extends React.Component {
           </div>
           <div className="post-form-btn-bar">
             <Link to="/"><button className="post-form-btn-close">Close</button></Link>
-            <button onClick={this.handleSubmit} className="post-form-btn-post">{this.props.actionButton}</button>
+            <button onClick={this.handleSubmit} className={this.postButtonVisible()}>{this.props.actionButton}</button>
           </div>
         </form>
       </div>
