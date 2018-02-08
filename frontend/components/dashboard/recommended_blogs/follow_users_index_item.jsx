@@ -7,10 +7,10 @@ class FollowUsersIndexItem extends React.Component {
 
   render() {
     return(
-      <li>
-        <div>
-          <h4>{this.props.user.username}</h4>
-          <button>+</button>
+      <li className="follow-users-item">
+        <div className="follow-users-item-content">
+          <h4 className="follow-users-item-username">{this.props.user.username}</h4>
+          <button className="follow-users-item-btn"><i className="fas fa-plus-square"></i></button>
         </div>
       </li>
     );

@@ -87,7 +87,7 @@ class Dashboard extends React.Component {
           <ProtectedRoute exact path="/edit/video/:postId" component={VideoPostFormContainer} />
           <PostIndexContainer props={this.props} />
         </div>
-        <div className="recommended-blogs">
+        <div className="right-side-bar">
           <FollowUsersIndexContainer props={this.props} />
         </div>
       </div>
@@ -97,13 +97,3 @@ class Dashboard extends React.Component {
 }
 
 export default Dashboard;
-
-
-// <button className="post-navbar-btn">
-//   <Link to="/new/chat" style={{textDecoration: 'none'}}>
-//     <div>
-//       <i className="fas fa-comment-alt"></i>
-//     </div>
-//     <span>Chat</span>
-// </Link>
-// </button>

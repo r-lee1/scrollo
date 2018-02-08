@@ -6,7 +6,7 @@ const NavBar = (props) => {
   if (currentUser) {
     return (
       <div className="navbar">
-        <h3>Hello, {currentUser.username}</h3>
+        <h3 className="navbar-greeting">Hello, {currentUser.username}</h3>
         <button onClick={logout}>Logout</button>
       </div>
     );

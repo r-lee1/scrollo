@@ -1,5 +1,5 @@
 .dashboard-content {
-  margin-left: 300px;
+  margin: 0 auto;
   display: flex;
-
+  width: 880px;
 }
