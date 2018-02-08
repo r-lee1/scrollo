@@ -20,7 +20,8 @@ class FollowUsersIndex extends React.Component {
                   key={user.id}
                   user={user}
                   createFollow={this.props.createFollow}
-                  currentUser={this.props.currentUser} />;}
+                  currentUser={this.props.currentUser}
+                  fetchPosts={this.props.fetchPosts}/>;}
         )}
       </ul>
     );

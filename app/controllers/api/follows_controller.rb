@@ -21,6 +21,10 @@ class Api::FollowsController < ApplicationController
     end
   end
 
+  def destroy
+    
+  end
+
   private
 
   def follow_params

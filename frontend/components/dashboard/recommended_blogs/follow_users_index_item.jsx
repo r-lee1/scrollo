@@ -14,7 +14,7 @@ class FollowUsersIndexItem extends React.Component {
         "followee_id": this.props.user.id
     };
 
-    this.props.createFollow(followEntry);
+    this.props.createFollow(followEntry).then(this.props.fetchPosts);
   }
 
   render() {

@@ -1,7 +1,9 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = Post.includes(:author)
+    followed_users = current_user.followees.pluck(:id)
+    followed_users << current_user.id
+    @posts = Post.includes(:author).where(author_id: followed_users)
     render 'api/posts/index'
   end
 
@@ -19,7 +21,7 @@ class Api::PostsController < ApplicationController
 
   def update
     @post = current_user.authored_posts.find(params[:id])
-    
+
     if @post.update(post_params)
       render 'api/posts/post'
     else
