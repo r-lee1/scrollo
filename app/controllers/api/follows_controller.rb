@@ -28,4 +28,3 @@ class Api::FollowsController < ApplicationController
   end
 
 end
-# [5, 6, 21, 8, 10, 22, 15, 17]
