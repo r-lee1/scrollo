@@ -113,7 +113,7 @@ class PostIndexItem extends React.Component {
               {this.deleteButtonVisible()}
             </div>
             <div className="post-link">
-              <a href={this.props.post.source}>{this.props.post.body}</a>
+              <a href={this.props.post.source} target="_blank">{this.props.post.body}</a>
             </div>
             <div className="post-likes-bar">
               {this.editButtonVisible(this.props.post.post_type)}
