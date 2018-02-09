@@ -77,7 +77,7 @@
   margin-left: 498px;
   width: 30px;
   height: 27px;
-  color: black;
+  color: #444;
 }
 .post .post-likes-bar .post-like-btn-liked {
   display: relative;
@@ -91,7 +91,7 @@
   margin-left: 498px;
   width: 30px;
   height: 27px;
-  color: red;
+  color: #F74141;
 }
 
 .post .post-photo {

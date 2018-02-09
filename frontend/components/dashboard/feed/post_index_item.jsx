@@ -14,7 +14,6 @@ class PostIndexItem extends React.Component {
     this.topFunction = this.topFunction.bind(this);
     this.likePost = this.likePost.bind(this);
     this.toggleLikeButton = this.toggleLikeButton.bind(this);
-    this.toggleLikeButtonIcon = this.toggleLikeButtonIcon.bind(this);
   }
 
   removePost(e) {
@@ -62,14 +61,10 @@ class PostIndexItem extends React.Component {
 
   toggleLikeButton() {
     if (this.props.liked) {
-      return <button onClick={this.likePost} className="post-like-btn-liked">yayy</button>;
+      return <button onClick={this.likePost} className="post-like-btn-liked"><i className="fas fa-heart"></i></button>;
     } else {
-      return <button onClick={this.likePost} className="post-like-btn">nooo</button>;
+      return <button onClick={this.likePost} className="post-like-btn"><i className="far fa-heart"></i></button>;
     }
-  }
-
-  toggleLikeButtonIcon() {
-    return this.props.liked ? "fas" : "far";
   }
 
   topFunction() {
