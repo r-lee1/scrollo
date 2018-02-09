@@ -26,10 +26,12 @@ class PostIndex extends React.Component {
               post => { return <PostIndexItem
                                   key={post.id}
                                   post={post}
+                                  liked={post.current_user_likes}
                                   currentUser={this.props.currentUser}
                                   deletePost={this.props.deletePost}
                                   deleteFollow={this.props.deleteFollow}
-                                  fetchPosts={this.props.fetchPosts}/>;}
+                                  fetchPosts={this.props.fetchPosts}
+                                  createLike={this.props.createLike}/>;}
             )}
         </ul>
       </div>

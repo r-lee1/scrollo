@@ -29,6 +29,15 @@ class User < ApplicationRecord
 
   has_many :followers, through: :follower_to_user_follows, source: :follower
 
+  has_many(
+    :likings,
+    class_name: 'Like',
+    foreign_key: :user_id,
+    primary_key: :id
+  )
+
+  has_many :liked_posts, through: :likings, source: :liked_post
+
   attr_reader :password
 
   def self.find_by_credentials(email, password)

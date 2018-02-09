@@ -12,6 +12,9 @@ class PostIndexItem extends React.Component {
     this.deleteButtonVisible = this.deleteButtonVisible.bind(this);
     this.removeFollow = this.removeFollow.bind(this);
     this.topFunction = this.topFunction.bind(this);
+    this.likePost = this.likePost.bind(this);
+    this.toggleLikeButton = this.toggleLikeButton.bind(this);
+    this.toggleLikeButtonIcon = this.toggleLikeButtonIcon.bind(this);
   }
 
   removePost(e) {
@@ -45,9 +48,28 @@ class PostIndexItem extends React.Component {
       );
     } else {
       return (
-        <button className="post-like-btn"><i className="far fa-heart"></i></button>
+        this.toggleLikeButton()
       );
     }
+  }
+
+  likePost() {
+    if (!this.props.liked) {
+      this.props.createLike(this.props.post.id);
+      this.toggleLikeButton();
+    }
+  }
+
+  toggleLikeButton() {
+    if (this.props.liked) {
+      return <button onClick={this.likePost} className="post-like-btn-liked">yayy</button>;
+    } else {
+      return <button onClick={this.likePost} className="post-like-btn">nooo</button>;
+    }
+  }
+
+  toggleLikeButtonIcon() {
+    return this.props.liked ? "fas" : "far";
   }
 
   topFunction() {
@@ -165,6 +187,6 @@ class PostIndexItem extends React.Component {
 }
 
 
-
-
+// <i className="fas fa-heart"></i>
+// <i className="far fa-heart"></i>
 export default PostIndexItem;

@@ -1,4 +1,5 @@
 import * as PostApiUtil from '../util/post_api_util';
+import * as LikeApiUtil from '../util/like_api_util';
 
 export const RECEIVE_POSTS = "RECEIVE_POSTS";
 export const RECEIVE_A_POST = "RECEIVE_A_POST";
@@ -43,4 +44,9 @@ export const updatePost = (post) => (dispatch) => {
 export const deletePost = (postId) => (dispatch) => {
   return PostApiUtil.deletePost(postId)
     .then((serverPost) => dispatch(removeAPost(serverPost)));
+};
+
+export const createLike = (postId) => (dispatch) => {
+  return LikeApiUtil.createLike(postId)
+    .then((serverPost) => dispatch(receiveAPost(serverPost)));
 };

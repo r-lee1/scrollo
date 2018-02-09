@@ -5,7 +5,7 @@ import PostIndex from './post_index';
 import {
   fetchPosts,
   deletePost,
-  updatePost } from '../../../actions/post_actions';
+  createLike } from '../../../actions/post_actions';
 
 import { deleteFollow } from '../../../actions/follow_actions';
 
@@ -19,8 +19,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
   fetchPosts: () => dispatch(fetchPosts()),
   deletePost: (postId) => dispatch(deletePost(postId)),
-  updatePost: (post) => dispatch(updatePost(post)),
-  deleteFollow: (postId) => dispatch(deleteFollow(postId))
+  deleteFollow: (postId) => dispatch(deleteFollow(postId)),
+  createLike: (postId) => dispatch(createLike(postId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostIndex);

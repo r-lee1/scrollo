@@ -77,8 +77,22 @@
   margin-left: 498px;
   width: 30px;
   height: 27px;
+  color: black;
 }
-
+.post .post-likes-bar .post-like-btn-liked {
+  display: relative;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: #fff;
+  border: none;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 498px;
+  width: 30px;
+  height: 27px;
+  color: red;
+}
 
 .post .post-photo {
   max-width: 100%;
@@ -163,10 +177,6 @@
   width: 80%;
   margin: 0 auto;
   background-color: #F0F0F0;
-}
-
-.post .post-link:hover {
-
 }
 
 .post .post-link a {
