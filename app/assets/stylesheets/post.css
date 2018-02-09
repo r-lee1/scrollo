@@ -20,15 +20,16 @@
 }
 
 .post .post-util-bar .post-delete-btn {
-  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: 'Comfortaa', cursive;
   font-weight: 700;
-  font-size: 16px;
-  margin-right: 10px;
+  font-size: 22px;
+  margin-right: 5px;
   background-color: #fff;
   border: none;
   border-style: none;
   outline: none;
   cursor: pointer;
+  color: rgb(96,96,96);
 }
 
 .post .post-util-bar .post-unfollow-btn {
@@ -67,11 +68,12 @@
   margin-left: 505px;
   width: 18px;
   height: 18px;
+  color: rgb(96,96,96);
 }
 
 .post .post-likes-bar .post-like-btn {
   display: relative;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 24px;
   background-color: #fff;
   border: none;
@@ -81,7 +83,7 @@
   margin-left: 5px;
   width: 35px;
   height: 30px;
-  color: #444;
+  color: rgb(102,102,102);
 }
 .post .post-likes-bar .post-like-btn-liked {
   display: relative;
@@ -108,6 +110,7 @@
   margin-left: 430px;
   text-align: right;
   line-height: 32px;
+  color: rgb(102,102,102);
 
 }
 

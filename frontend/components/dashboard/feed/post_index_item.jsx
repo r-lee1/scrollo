@@ -29,7 +29,7 @@ class PostIndexItem extends React.Component {
   deleteButtonVisible() {
     if (this.props.currentUser.id === this.props.post.author_id) {
       return (
-        <button className="post-delete-btn" onClick={this.removePost}>X</button>
+        <button className="post-delete-btn" onClick={this.removePost}>x</button>
       );
     } else {
       return (

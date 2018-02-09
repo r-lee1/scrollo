@@ -6,21 +6,24 @@ const NavBar = (props) => {
   if (currentUser) {
     return (
       <div className="navbar">
-        <h3 className="navbar-greeting">Hello, {currentUser.username}</h3>
-        <button onClick={logout}>Logout</button>
+        <a href="/"><h1 className="navbar-logo"><i className="fab fa-stripe-s"></i></h1></a>
+        <div className="navbar-right">
+          <h3 className="navbar-greeting">Hello, {currentUser.username}</h3>
+          <button className="logout-btn" onClick={logout}>Logout</button>
+        </div>
       </div>
     );
   }
   if (location.pathname === '/signup') {
     return (
       <div className="navbar">
-        <Link to="/login"><button>Log In</button></Link>
+        <Link to="/login"><button className="sign-btn">Log In</button></Link>
       </div>
     );
   } else {
     return (
       <div className="navbar">
-        <Link to="/signup"><button>Sign Up</button></Link>
+        <Link to="/signup"><button className="sign-btn">Sign Up</button></Link>
       </div>
     );
   }
