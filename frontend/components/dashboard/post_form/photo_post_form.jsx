@@ -78,10 +78,3 @@ class PhotoPostForm extends React.Component {
 }
 
 export default PhotoPostForm;
-
-
-// <input
-//   onChange={this.updateInput("source")}
-//   placeholder="image url"
-//   value={this.state.source}>
-// </input>
