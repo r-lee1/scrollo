@@ -28,15 +28,6 @@ body {
   100% {color:rgb(116, 128, 137); transform:scale(1.03);}
 }
 
-/* rgb(217, 94, 64)
-rgb(242, 153, 46)
-rgb(86, 188, 138)
-rgb(167, 125, 194)
-rgb(116, 128, 137)
-25%  {color:rgb(176,224,230); transform:scale(0.95);}
-50%  {color:rgb(135,206,235); transform:scale(1.05);}
-75%  {color:rgb(176,224,230); transform:scale(0.95);} */
-
 .navbar-logo {
   color: #fff;
   font-size: 36px;
