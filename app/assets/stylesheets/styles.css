@@ -7,7 +7,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
-  height: 54px;
+  height: 60px;
   width: 100%;
   border-bottom: 1px solid rgba(120,120,120, 0.8);
   box-sizing: border-box;
@@ -20,11 +20,27 @@ body {
   z-index: 90;
 }
 
+@keyframes squiggle {
+  0%   {color:#fff; transform:scale(1.05);}
+  25%  {color:rgb(176,224,230); transform:scale(0.95);}
+  50%  {color:rgb(135,206,235); transform:scale(1.05);}
+  75%  {color:rgb(176,224,230); transform:scale(0.95);}
+  100% {color:#fff; transform:scale(1.05);}
+}
+
 .navbar-logo {
   color: #fff;
   font-size: 36px;
   margin-left: 15px;
+  animation-name: squiggle;
+  animation-duration: 1.85s;
+}
 
+.navbar-logo:hover {
+  color: #fff;
+  font-size: 36px;
+  margin-left: 15px;
+  transform:scale(1.05)
 }
 
 .navbar-right {
