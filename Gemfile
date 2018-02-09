@@ -32,7 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
-gem 'pry-rails'
+
 
 
 group :development, :test do
@@ -41,6 +41,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
 end
 
 group :development do
