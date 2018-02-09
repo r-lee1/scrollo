@@ -50,3 +50,8 @@ export const createLike = (postId) => (dispatch) => {
   return LikeApiUtil.createLike(postId)
     .then((serverPost) => dispatch(receiveAPost(serverPost)));
 };
+
+export const deleteLike = (postId) => (dispatch) => {
+  return LikeApiUtil.deleteLike(postId)
+    .then((serverPost) => dispatch(receiveAPost(serverPost)));
+};

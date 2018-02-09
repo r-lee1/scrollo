@@ -51,6 +51,10 @@
 .post .post-likes-bar {
   height: 33px;
 }
+.post .post-likes-bar-s {
+  display: flex;
+  align-items: flex-end;
+}
 
 .post .post-likes-bar .post-edit-btn {
   font-weight: 400;
@@ -74,9 +78,9 @@
   border-style: none;
   outline: none;
   cursor: pointer;
-  margin-left: 498px;
-  width: 30px;
-  height: 27px;
+  margin-left: 5px;
+  width: 35px;
+  height: 30px;
   color: #444;
 }
 .post .post-likes-bar .post-like-btn-liked {
@@ -88,10 +92,23 @@
   border-style: none;
   outline: none;
   cursor: pointer;
-  margin-left: 498px;
-  width: 30px;
-  height: 27px;
+  margin-left: 5px;
+  width: 35px;
+  height: 30px;
   color: #F74141;
+}
+
+.post .post-likes-bar .post-like-count {
+  display: inline-block;
+  font-family: "Helvetica Neue","HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  width: 60px;
+  height: 30px;
+  margin-left: 430px;
+  text-align: right;
+  line-height: 32px;
+
 }
 
 .post .post-photo {

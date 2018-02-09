@@ -47,7 +47,10 @@ class PostIndexItem extends React.Component {
       );
     } else {
       return (
-        this.toggleLikeButton()
+        <div className="post-likes-bar-s">
+          <h4 className="post-like-count">{this.props.post.likes_count}</h4>
+          {this.toggleLikeButton()}
+        </div>
       );
     }
   }
@@ -55,7 +58,8 @@ class PostIndexItem extends React.Component {
   likePost() {
     if (!this.props.liked) {
       this.props.createLike(this.props.post.id);
-      this.toggleLikeButton();
+    } else {
+      this.props.deleteLike(this.props.post.id);
     }
   }
 
@@ -182,6 +186,4 @@ class PostIndexItem extends React.Component {
 }
 
 
-// <i className="fas fa-heart"></i>
-// <i className="far fa-heart"></i>
 export default PostIndexItem;
