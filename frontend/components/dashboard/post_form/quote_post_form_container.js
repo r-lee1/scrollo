@@ -5,7 +5,7 @@ import QuotePostForm from './quote_post_form';
 import { createPost, updatePost } from '../../../actions/post_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  if (ownProps.match.path === "/edit/quote/:postId") {
+  if (ownProps.match.path === "/dashboard/edit/quote/:postId") {
     return ({
       post: state.entities.posts[ownProps.match.params.postId],
       actionButton: "Edit"
@@ -19,7 +19,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  let actionPost = ownProps.match.path === "/edit/quote/:postId" ? updatePost : createPost;
+  let actionPost = ownProps.match.path === "/dashboard/edit/quote/:postId" ? updatePost : createPost;
   return {
     actionPost: (post) => dispatch(actionPost(post))
   };
