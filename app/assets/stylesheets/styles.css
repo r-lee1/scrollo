@@ -157,6 +157,12 @@ body {
   border: none;
 }
 
+.session-form-btn button:focus {
+  outline: none;
+  background-color: rgb(79, 148, 192);
+}
+
+
 .errors-container {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-size: 12px;

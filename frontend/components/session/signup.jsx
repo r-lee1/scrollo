@@ -10,6 +10,7 @@ class Signup extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillUnmount() {
@@ -25,6 +26,15 @@ class Signup extends React.Component {
     return (e) => {
       this.setState({[type]: e.target.value});
     };
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const user = {
+      email: "guest@email.com",
+      password: "password"
+    };
+    this.props.login(user);
   }
 
   renderErrors() {
@@ -71,6 +81,7 @@ class Signup extends React.Component {
             {this.renderErrors()}
             <div className="session-form-btn">
               <button>Sign Up</button>
+              <button onClick={this.handleDemo}>Demo</button>
             </div>
           </form>
         </div>

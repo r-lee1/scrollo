@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
   const {currentUser, logout, location} = props;
+
+  function topFunction() {
+      window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   if (currentUser) {
     return (
       <div className="navbar">
-        <a href="/"><h1 className="navbar-logo"><i className="fab fa-stripe-s"></i></h1></a>
+        <a href="/#/dashboard" id="logo" onClick={topFunction}><h1 className="navbar-logo"><i className="fab fa-stripe-s"></i></h1></a>
         <div className="navbar-right">
           <h3 className="navbar-greeting">Hello, {currentUser.username}</h3>
           <button className="logout-btn" onClick={logout}>Logout</button>
@@ -27,6 +36,7 @@ const NavBar = (props) => {
       </div>
     );
   }
+
 };
 
 export default NavBar;

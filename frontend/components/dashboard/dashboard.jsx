@@ -25,7 +25,7 @@ class Dashboard extends React.Component {
         <div className="feed">
           <ul className="post-navbar">
             <button className="post-navbar-btn">
-              <Link to="/new/text" style={{textDecoration: 'none'}}>
+              <Link to="/dashboard/new/text" style={{textDecoration: 'none'}}>
                 <div>
                   <i className="fas fa-font"></i>
                 </div>
@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
               </Link>
             </button>
             <button className="post-navbar-btn">
-              <Link to="/new/photo" style={{textDecoration: 'none'}}>
+              <Link to="/dashboard/new/photo" style={{textDecoration: 'none'}}>
                 <div>
                   <i className="fas fa-camera-retro"></i>
                 </div>
@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
               </Link>
             </button>
             <button className="post-navbar-btn">
-              <Link to="/new/quote" style={{textDecoration: 'none'}}>
+              <Link to="/dashboard/new/quote" style={{textDecoration: 'none'}}>
                 <div>
                   <i className="fas fa-quote-left"></i>
                 </div>
@@ -49,7 +49,7 @@ class Dashboard extends React.Component {
             </Link>
           </button>
             <button className="post-navbar-btn">
-              <Link to="/new/link" style={{textDecoration: 'none'}}>
+              <Link to="/dashboard/new/link" style={{textDecoration: 'none'}}>
                 <div>
                   <i className="fas fa-link"></i>
                 </div>
@@ -57,7 +57,7 @@ class Dashboard extends React.Component {
             </Link>
           </button>
             <button className="post-navbar-btn">
-              <Link to="/new/audio" style={{textDecoration: 'none'}}>
+              <Link to="/dashboard/new/audio" style={{textDecoration: 'none'}}>
                 <div>
                   <i className="fas fa-headphones "></i>
                 </div>
@@ -65,7 +65,7 @@ class Dashboard extends React.Component {
             </Link>
           </button>
             <button className="post-navbar-btn">
-              <Link to="/new/video" style={{textDecoration: 'none'}}>
+              <Link to="/dashboard/new/video" style={{textDecoration: 'none'}}>
                 <div>
                   <i className="fas fa-video"></i>
                 </div>
@@ -73,18 +73,18 @@ class Dashboard extends React.Component {
             </Link>
           </button>
           </ul>
-          <ProtectedRoute exact path="/new/text" component={TextPostFormContainer} />
-          <ProtectedRoute exact path="/edit/text/:postId" component={TextPostFormContainer} />
-          <ProtectedRoute exact path="/new/photo" component={PhotoPostFormContainer} />
-          <ProtectedRoute exact path="/edit/photo/:postId" component={PhotoPostFormContainer} />
-          <ProtectedRoute exact path="/new/quote" component={QuotePostFormContainer} />
-          <ProtectedRoute exact path="/edit/quote/:postId" component={QuotePostFormContainer} />
-          <ProtectedRoute exact path="/new/link" component={LinkPostFormContainer} />
-          <ProtectedRoute exact path="/edit/link/:postId" component={LinkPostFormContainer} />
-          <ProtectedRoute exact path="/new/audio" component={AudioPostFormContainer} />
-          <ProtectedRoute exact path="/edit/audio/:postId" component={AudioPostFormContainer} />
-          <ProtectedRoute exact path="/new/video" component={VideoPostFormContainer} />
-          <ProtectedRoute exact path="/edit/video/:postId" component={VideoPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/new/text" component={TextPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/edit/text/:postId" component={TextPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/new/photo" component={PhotoPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/edit/photo/:postId" component={PhotoPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/new/quote" component={QuotePostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/edit/quote/:postId" component={QuotePostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/new/link" component={LinkPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/edit/link/:postId" component={LinkPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/new/audio" component={AudioPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/edit/audio/:postId" component={AudioPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/new/video" component={VideoPostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/edit/video/:postId" component={VideoPostFormContainer} />
           <PostIndexContainer props={this.props} />
         </div>
         <div className="right-side-bar">

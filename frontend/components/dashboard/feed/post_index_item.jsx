@@ -41,7 +41,7 @@ class PostIndexItem extends React.Component {
   editButtonVisible(postType) {
     if (this.props.currentUser.id === this.props.post.author_id) {
       return (
-        <Link to={`/edit/${postType}/${this.props.post.id}`}>
+        <Link to={`/dashboard/edit/${postType}/${this.props.post.id}`}>
           <button onClick={this.topFunction} className="post-edit-btn"><i className="fas fa-cog"></i></button>
         </Link>
       );

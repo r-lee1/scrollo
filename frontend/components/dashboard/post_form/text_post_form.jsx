@@ -5,7 +5,7 @@ class TextPostForm extends React.Component {
   constructor(props) {
     super(props);
 
-    if (props.match.path === "/edit/text/:postId") {
+    if (props.match.path === "/dashboard/edit/text/:postId") {
       this.state = this.props.post;
     } else {
       this.state = {
@@ -21,7 +21,7 @@ class TextPostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.actionPost(this.state).then(() => this.props.history.push('/'));
+    this.props.actionPost(this.state).then(() => this.props.history.push('/dashboard'));
   }
 
   updateInput(field) {
@@ -56,7 +56,7 @@ class TextPostForm extends React.Component {
               value={this.state.body}/>
           </div>
           <div className="post-form-btn-bar">
-            <Link to="/"><button className="post-form-btn-close">Close</button></Link>
+            <Link to="/dashboard"><button className="post-form-btn-close">Close</button></Link>
             <button
               onClick={this.handleSubmit}
               className={this.postButtonVisible()}>
