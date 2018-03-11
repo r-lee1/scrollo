@@ -113,31 +113,37 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 300px;
+  position: relative;
+  top: -700px;
   width: 800px;
-  right: 500px;
+  margin: 0 auto;
 
 }
 
 .splash-content h1 {
-  color: white;
+  font-size: 56px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #fff;
   width: 300px;
   text-align: center;
-  font-size: 56px;
+  padding: 15px;
 }
 
 .splash-content p {
-  width: 500px;
-  color: white;
+  width: 900px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #fff;
   font-size: 36px;
-  padding: 20px;
+  padding: 12px;
 }
 
 .splash-content button {
   width: 250px;
   cursor: pointer;
   padding: 12px;
+  margin-top: 30px;
   margin-bottom: 3px;
   border-radius: 2px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
