@@ -1,5 +1,7 @@
 body {
-  background-color: #36465d;
+  background-color: #31486b;
+
+  /* #36465d; */
   height: 100vh;
 }
 
@@ -16,8 +18,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #36465d;
+  background-color: #31486b;
   z-index: 90;
+  opacity: 0.9;
 }
 
 @keyframes squiggle {
@@ -99,13 +102,30 @@ body {
   color: #fff;
   width: 232px;
   height: 50px;
-  padding: 20px;
+  padding: 45px;
   text-align: center;
 }
 
 .splash-content {
   width: 100vw;
+  max-height: 800px;
+  overflow: hidden;
+  /* background-image: url("https://res.cloudinary.com/dxyit2phe/image/upload/v1520720604/bogdan-dada-156739-unsplash_sarzuj.jpg"); */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+}
 
+.splash-content::after {
+  background: url("https://res.cloudinary.com/dxyit2phe/image/upload/v1520720604/bogdan-dada-156739-unsplash_sarzuj.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .splash-center {
@@ -114,7 +134,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -700px;
+  top: -775px;
   width: 800px;
   margin: 0 auto;
 

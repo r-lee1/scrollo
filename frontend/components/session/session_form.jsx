@@ -51,7 +51,7 @@ class SessionForm extends React.Component {
       return (
         <div className="form-page">
           <div className="session-form-container">
-            <h1 className="logo">scrollo.</h1>
+            <h1 className="logo">Scrollo.</h1>
             <form className="session-form" onSubmit={this.handleSubmit}>
               <div className="session-form-input">
                 <label>
