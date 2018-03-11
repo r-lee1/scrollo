@@ -103,6 +103,65 @@ body {
   text-align: center;
 }
 
+.splash-content {
+  width: 100vw;
+
+}
+
+.splash-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 300px;
+  width: 800px;
+  right: 500px;
+
+}
+
+.splash-content h1 {
+  color: white;
+  width: 300px;
+  text-align: center;
+  font-size: 56px;
+}
+
+.splash-content p {
+  width: 500px;
+  color: white;
+  font-size: 36px;
+  padding: 20px;
+}
+
+.splash-content button {
+  width: 250px;
+  cursor: pointer;
+  padding: 12px;
+  margin-bottom: 3px;
+  border-radius: 2px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: rgb(82, 158, 204);
+  color: white;
+  border: none;
+}
+
+.splash-content button:focus {
+  outline: none;
+  background-color: rgb(79, 148, 192);
+}
+
+.splash-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -40px;
+  z-index: -1;
+  opacity: 0.6;
+}
+
 .session-form-container {
   margin: 0 auto;
   display: flex;
