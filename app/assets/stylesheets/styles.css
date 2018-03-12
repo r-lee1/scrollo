@@ -1,6 +1,5 @@
 body {
   background-color: #31486b;
-
   /* #36465d; */
   height: 100vh;
 }
@@ -39,11 +38,19 @@ body {
   animation-duration: 1.88s;
 }
 
+/* .navbar-logo-animate {
+  color: #fff;
+  font-size: 36px;
+  margin-left: 15px;
+  animation-name: squiggle;
+  animation-duration: 1.88s;
+} */
+
 .navbar-logo:hover {
   color: #fff;
   font-size: 36px;
   margin-left: 15px;
-  transform:scale(1.05)
+  transform:scale(1.05);
 }
 
 .navbar-right {
@@ -108,11 +115,8 @@ body {
 
 .splash-content {
   width: 100vw;
-  max-height: 800px;
+  max-height: 810px;
   overflow: hidden;
-  /* background-image: url("https://res.cloudinary.com/dxyit2phe/image/upload/v1520720604/bogdan-dada-156739-unsplash_sarzuj.jpg"); */
-  /* background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 .splash-content::after {
@@ -186,6 +190,33 @@ body {
   top: -40px;
   z-index: -1;
   opacity: 0.6;
+}
+
+.signup-page{
+  background-image: url("https://res.cloudinary.com/dxyit2phe/image/upload/v1520823562/thought-catalog-214785-unsplash_k3eviv.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.session-page {
+  background-image: url("https://res.cloudinary.com/dxyit2phe/image/upload/v1520824113/sabri-tuzcu-197978-unsplash_sisabd.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .session-form-container {

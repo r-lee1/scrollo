@@ -49,7 +49,8 @@ class SessionForm extends React.Component {
 
   render(){
       return (
-        <div className="form-page">
+        <div>
+          <div className="session-page"></div>
           <div className="session-form-container">
             <h1 className="logo">Scrollo.</h1>
             <form className="session-form" onSubmit={this.handleSubmit}>
