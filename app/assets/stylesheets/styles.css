@@ -132,7 +132,7 @@ body {
   justify-content: center;
   position: fixed;
   opacity: 0.95;
-  right: -51px;
+  left: -51px;
   top: 380px;
   bottom: 10px;
   background-color: #FEFEFE;
@@ -143,7 +143,7 @@ body {
 }
 
 .links:hover {
-  right: -3px;
+  left: -3px;
 }
 
 .links a {
