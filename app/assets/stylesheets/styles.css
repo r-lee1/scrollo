@@ -113,6 +113,42 @@ body {
   text-align: center;
 }
 
+.links {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0.95;
+  right: -51px;
+  top: 380px;
+  bottom: 10px;
+  background-color: #FEFEFE;
+  width: 63px;
+  height: 110px;
+  border-radius: 5px;
+  transition: 0.35s;
+}
+
+.links:hover {
+  right: -3px;
+}
+
+.links a {
+  color: #25272B;
+  font-size: 40px;
+  margin: 4px 0;
+  cursor: pointer;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.links a:hover {
+  text-shadow: 0 0 2px #cacaca;
+  transform: scale(1.03);
+}
+
 .splash-content {
   width: 100vw;
   max-height: 810px;

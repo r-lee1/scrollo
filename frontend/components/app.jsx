@@ -12,6 +12,7 @@ import {
  import SessionFormContainer from './session/session_form_container';
  import DashboardContainer from './dashboard/dashboard_container';
  import TextPostFormContainer from './dashboard/post_form/text_post_form_container';
+ import Footer from './footer/footer';
 
 const App = () => {
   return (
@@ -25,6 +26,9 @@ const App = () => {
         <AuthRoute exact path="/login" component={SessionFormContainer} />
         <ProtectedRoute path ="/dashboard" component={DashboardContainer} />
       </Switch>
+      <footer>
+        <Route component={Footer} />
+      </footer>
     </div>
   );
 };
