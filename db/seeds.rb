@@ -53,7 +53,7 @@ Post.create(post_type: "quote", body: "The best and most beautiful things in the
 Post.create(post_type: "photo", body: "Studio Ghibli", source: "https://res.cloudinary.com/dxyit2phe/image/upload/v1520909217/giphy_b1qzak.gif", author_id: 14)
 Post.create(post_type: "quote", body: "I am a leaf on the wind, watch how I soar.", source:"Wash, Serenity", author_id: 12)
 Post.create(post_type: "photo", body: "New Year's Eve", source: "https://res.cloudinary.com/dxyit2phe/image/upload/v1520910080/new-years-eve-1953253_1280_rk5dor.jpg", author_id: 13)
-Post.create(post_type: "link", source: "https://www.lipsum.com/https://www.geek.com/games/mario-replaces-the-google-maps-arrow-for-national-mario-day-1733352/", body: "Mario Replaces the Google Maps Arrow for National Mario Day", author_id: 12)
+Post.create(post_type: "link", source: "https://www.geek.com/games/mario-replaces-the-google-maps-arrow-for-national-mario-day-1733352/", body: "Mario Replaces the Google Maps Arrow for National Mario Day", author_id: 12)
 Post.create(post_type: "photo", body: "City at dusk", source: "https://res.cloudinary.com/dxyit2phe/image/upload/v1517953501/g031k1teqbstdbbzllyh.jpg", author_id: 3)
 Post.create(post_type: "photo", source: "https://res.cloudinary.com/dxyit2phe/image/upload/v1520910064/fruit-3048001_1920_co8r4c.jpg", author_id: 13)
 Post.create(post_type: "photo", source: "https://res.cloudinary.com/dxyit2phe/image/upload/v1518126121/ziurvssmwvl3kddj2vbm.gif", author_id: 7)
