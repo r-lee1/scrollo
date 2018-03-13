@@ -86,6 +86,11 @@ body {
 
 }
 
+.navbar .logout-btn:focus {
+  outline: none;
+  background-color: #ddd;
+}
+
 .navbar .sign-btn {
   position: absolute;
   box-sizing: border-box;
@@ -100,6 +105,11 @@ body {
   font-weight: 700;
   right: 15px;
   bottom: 15px;
+}
+
+.navbar .sign-btn:focus {
+  outline: none;
+  background-color: #ddd;
 }
 
 .logo {
@@ -136,7 +146,7 @@ body {
 }
 
 .links a {
-  color: #25272B;
+  color: #1D242E;
   font-size: 40px;
   margin: 4px 0;
   cursor: pointer;
