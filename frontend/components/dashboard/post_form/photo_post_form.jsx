@@ -41,7 +41,7 @@ class PhotoPostForm extends React.Component {
     window.cloudinary.openUploadWidget(
       window.cloudinary_options,
       function(errors, result){
-        window.postImage(result[0].url);
+        window.postImage(result[0].secure_url);
       }
     );
   }

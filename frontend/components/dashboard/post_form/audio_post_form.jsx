@@ -41,7 +41,7 @@ class AudioPostForm extends React.Component {
     window.cloudinary.openUploadWidget(
       window.cloudinary_video_options,
       function(errors, result){
-        window.postMedia(result[0].url);
+        window.postMedia(result[0].secure_url);
       }
     );
   }

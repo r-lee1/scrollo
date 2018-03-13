@@ -1,5 +1,6 @@
 body {
-  background-color: #31486b;
+  background-color: #314972;
+  /* #31486b */
   /* #36465d; */
   height: 100vh;
 }
@@ -17,7 +18,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #31486b;
+  background-color: #314972;
   z-index: 90;
   opacity: 0.9;
 }
