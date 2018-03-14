@@ -162,11 +162,10 @@ body {
 
 .splash-content {
   width: 100vw;
-  /* max-height: 1000px; */
-  overflow: hidden;
+  height: 600px;
 }
 
-.splash-content::after {
+/* .splash-content::after {
   background: url("https://res.cloudinary.com/dxyit2phe/image/upload/v1520720604/bogdan-dada-156739-unsplash_sarzuj.jpg");
   opacity: 0.5;
   top: 0;
@@ -177,7 +176,7 @@ body {
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 .splash-center {
   display: flex;
@@ -185,7 +184,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -775px;
+  top: 175px;
   width: 800px;
   margin: 0 auto;
 
@@ -230,13 +229,17 @@ body {
   background-color: rgb(79, 148, 192);
 }
 
-.splash-img {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  top: -10px;
+.splash-bg {
+  background-image: url("https://res.cloudinary.com/dxyit2phe/image/upload/v1520720604/bogdan-dada-156739-unsplash_sarzuj.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
   z-index: -1;
-  opacity: 0.6;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .signup-page{
