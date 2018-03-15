@@ -219,6 +219,7 @@
   width: 65px;
   margin-top: 15px;
   margin-bottom: 15px;
+  padding: 0 5px;
 }
 
 .author-avatar img {
@@ -226,7 +227,7 @@
   height: 65px;
   position: sticky;
   top: 61px;
-  background-color: #f4f4f4;
+  background-color: rgba(255,255,255,0.98);
   border-radius: 5px;
 }
 
