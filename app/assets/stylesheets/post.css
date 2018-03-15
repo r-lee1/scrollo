@@ -214,3 +214,22 @@
 .post .post-link a:hover {
   text-decoration: underline;
 }
+
+.author-avatar {
+  width: 65px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 65px;
+  position: sticky;
+  top: 61px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.post-whole {
+  display: flex;
+}

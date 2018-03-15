@@ -12,24 +12,24 @@ Follow.destroy_all
 Like.destroy_all
 
 user_list = [
-  ["guest", "guest@email.com", "password"],
-  ["bob", "bob@email.com", "password"],
-  ["batman", "batman@email.com", "password"],
-  ["superman", "superman@email.com", "password"],
-  ["wonderwoman", "ww@email.com", "password"],
-  ["jengole", "jengole@email.com", "password"],
-  ["baobao", "baobao@email.com", "password"],
-  ["worldtravler", "wt@email.com", "password"],
-  ["pixelationary", "pixel@email.com", "password"],
-  ["ifoodie", "foodie@email.com", "password"],
-  ["sunsetlover", "sunsetlover@email.com", "password"],
-  ["GeekTroop", "geek@email.com", "password"],
-  ["WorldOfColors", "colors@email.com", "password"],
-  ["AnimationNation", "animation@email.com", "password"]
+  ["guest", "guest@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521137704/starwars-stormtrooper_dgu35y.png"],
+  ["bob", "bob@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148379/starwars-darth-vader_kmltes.png"],
+  ["batman", "batman@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521149925/batmansuit_qsrawn.png"],
+  ["superman", "superman@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521149925/supermanlogo_c2uzsw.jpg"],
+  ["wonderwoman", "ww@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148414/if_marvelgirl_1092588_d0rlaa.png"],
+  ["jengole", "jengole@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148379/starwars-bb-8_cxqsct.png"],
+  ["baobao", "baobao@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148379/starwars-boba-fett_f0bccv.png"],
+  ["worldtravler", "wt@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148414/if_Flat1-07_2425108_1_bopr1y.png"],
+  ["pixelationary", "pixel@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521149925/8bitlink_opqmuy.jpg"],
+  ["ifoodie", "foodie@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148414/if_Kitchen-01_2059356_etwd2c.png"],
+  ["sunsetlover", "sunsetlover@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148414/if_Flat1-29_2425204_fw2r4c.png"],
+  ["GeekTroop", "geek@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148414/if_game_512535_hhpyta.png"],
+  ["WorldOfColors", "colors@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148414/if_draw-09_725556_gwa1vg.png"],
+  ["AnimationNation", "animation@email.com", "password", "https://res.cloudinary.com/dxyit2phe/image/upload/v1521148414/if_ninja-background_479477_f8mmsj.png"]
 ]
 
 user_list.each do |user|
-  User.create(username: user[0], email: user[1], password: user[2])
+  User.create(username: user[0], email: user[1], password: user[2], img_url: user[3])
 end
 
 Post.create(post_type: "photo", body: "Dream vacation", source: "https://res.cloudinary.com/dxyit2phe/image/upload/v1517798500/mjzgbjgfybkwfwexwxng.jpg", author_id: 2)
