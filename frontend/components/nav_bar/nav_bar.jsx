@@ -5,15 +5,18 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     // const {currentUser, logout, location} = props;
-    // this.topFunction = this.topFunction.bind(this);
   }
 
-  topFunction() {
-    window.scroll({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-    });
+  // topFunction() {
+  //   window.scroll({
+  //   top: 0,
+  //   left: 0,
+  //   behavior: 'smooth'
+  //   });
+  // }
+
+  refreshPage() {
+    window.location.reload();
   }
 
   // componentDidMount() {
@@ -27,7 +30,7 @@ class NavBar extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className="navbar">
-          <a href="/#/dashboard" id="logo" onClick={this.topFunction}><h1 className="navbar-logo"><i className="fab fa-stripe-s"></i></h1></a>
+          <a href="/#/dashboard" id="logo" onClick={this.refreshPage}><h1 className="navbar-logo"><i className="fab fa-stripe-s"></i></h1></a>
           <div className="navbar-right">
             <h3 className="navbar-greeting">Hello, {this.props.currentUser.username}</h3>
             <button className="logout-btn" onClick={this.props.logout}>Logout</button>
