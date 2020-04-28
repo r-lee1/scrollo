@@ -10,7 +10,7 @@ Scrollo is a full-stack web application inspired by Tumblr, a microblogging webs
 
 Users can create posts of different types (text, photo, quote, link, audio, and video) from their dashboard. The user can select a post type from the post navigation bar and a post form that is tailored to that post type becomes available.
 
-<details><summary>See Code</summary>
+<details><summary>Show Code</summary>
 <p>
 
 ```js
@@ -71,7 +71,7 @@ Users can create posts of different types (text, photo, quote, link, audio, and 
 ![post-form-demo](https://media.giphy.com/media/xUNd9K8IQikFkN7q8g/giphy.gif)  
 
 Interaction with posts is protected so users have to be logged in.
-<details><summary>See Code</summary>
+<details><summary>Show Code</summary>
 <p>
 
 ```js
@@ -98,6 +98,8 @@ Users can edit/delete their own posts through the feed.
 ### Cloudinary
 
 Photo, audio, and video can be uploaded using the Cloudinary widget.
+<details><summary>Show Code</summary>
+<p>
 
 ```js
 postImage(url) {
@@ -116,6 +118,8 @@ uploadImage(e) {
 }
 ```
 
+</p></details>
+
 ### Feed
 
 The feed is populated with the user's own posts and those of other users the current user is following.
@@ -128,3 +132,43 @@ Actions available to the user on these posts change depending the authorship.
 Users can like/unlike other users' posts.
 
 ![post-like-demo](https://media.giphy.com/media/l3diP9PZZ0dAyLPby/giphy.gif)
+
+### Redux
+
+Integrated Redux architecture for reliable and efficient state management.
+
+Container components access the entire store state and select data that the connected component needs.
+<details><summary>Show Code</summary>
+<p>
+
+```js
+const mapStateToProps = (state, ownProps) => {
+  if (ownProps.match.path === "/dashboard/edit/text/:postId") {
+    return ({
+      post: state.entities.posts[ownProps.match.params.postId],
+      actionButton: "Edit"
+    });
+  } else {
+    return ({
+      post: {},
+      actionButton: "Post"
+    });
+  }
+};
+```
+
+<p/></details><br \>
+
+Container components pass dispatching functions as props to the connected component. These functions will dispatch an action to trigger a state change.
+<details><summary>Show Code</summary>
+<p>
+
+```js
+const mapDispatchToProps = (dispatch, ownProps) => {
+  let actionPost = ownProps.match.path === "/dashboard/edit/text/:postId" ? updatePost : createPost;
+  return {
+    actionPost: (post) => dispatch(actionPost(post))
+  };
+};
+```
+<p/></details><br \>
