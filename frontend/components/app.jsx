@@ -11,7 +11,6 @@ import {
  import SignupContainer from './session/signup_container';
  import SessionFormContainer from './session/session_form_container';
  import DashboardContainer from './dashboard/dashboard_container';
- import TextPostFormContainer from './dashboard/post_form/text_post_form_container';
  import Footer from './footer/footer';
 
 const App = () => {

@@ -1,12 +1,12 @@
 import React from 'react';
 import PostIndexContainer from './feed/post_index_container';
 import FollowUsersIndexContainer from './recommended_blogs/follow_users_index_container';
-import TextPostFormContainer from './post_form/text_post_form_container';
-import PhotoPostFormContainer from './post_form/photo_post_form_container';
-import QuotePostFormContainer from './post_form/quote_post_form_container';
-import LinkPostFormContainer from './post_form/link_post_form_container';
-import AudioPostFormContainer from './post_form/audio_post_form_container';
-import VideoPostFormContainer from './post_form/video_post_form_container';
+import { AudioPostFormContainer,
+         LinkPostFormContainer,
+         PhotoPostFormContainer,
+         QuotePostFormContainer,
+         TextPostFormContainer,
+         VideoPostFormContainer } from './post_form/post_form_container';
 import { Link, Route } from 'react-router-dom';
 
 import {
@@ -76,8 +76,8 @@ class Dashboard extends React.Component {
           <ProtectedRoute exact path="/dashboard/new/text" component={TextPostFormContainer} />
           <ProtectedRoute exact path="/dashboard/edit/text/:postId" component={TextPostFormContainer} />
           <ProtectedRoute exact path="/dashboard/new/photo" component={PhotoPostFormContainer} />
-          <ProtectedRoute exact path="/dashboard/edit/photo/:postId" component={PhotoPostFormContainer} />
           <ProtectedRoute exact path="/dashboard/new/quote" component={QuotePostFormContainer} />
+          <ProtectedRoute exact path="/dashboard/edit/photo/:postId" component={PhotoPostFormContainer} />
           <ProtectedRoute exact path="/dashboard/edit/quote/:postId" component={QuotePostFormContainer} />
           <ProtectedRoute exact path="/dashboard/new/link" component={LinkPostFormContainer} />
           <ProtectedRoute exact path="/dashboard/edit/link/:postId" component={LinkPostFormContainer} />

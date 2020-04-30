@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class TextPostForm extends React.Component {
   constructor(props) {
     super(props);
-
     if (props.match.path === "/dashboard/edit/text/:postId") {
       this.state = this.props.post;
     } else {
