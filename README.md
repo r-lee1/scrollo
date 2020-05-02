@@ -90,12 +90,7 @@ const Protected = ({ loggedIn, exact, path, component: Component }) => (
 </p>
 </details><br \>
 
-Users can edit/delete their own posts through the feed.
-
-![post-edit-demo](https://media.giphy.com/media/26wkG8Uj24rF7cc0w/giphy.gif)
-
-
-### Cloudinary
+###### Cloudinary
 
 Photo, audio, and video can be uploaded using the Cloudinary widget.
 <details><summary>Show Code</summary>
@@ -125,11 +120,102 @@ uploadImage(e) {
 The feed is populated with the user's own posts and those of other users the current user is following.
 Actions available to the user on these posts change depending the authorship.
 
+Users can edit/delete their own posts through the feed.
 
+![post-edit-demo](https://media.giphy.com/media/26wkG8Uj24rF7cc0w/giphy.gif)
 
-### Likes
+<details><summary>Show Code</summary>
+<p>
 
-Users can like/unlike other users' posts.
+```js
+deleteButtonVisible() {
+  if (this.props.currentUser.id === this.props.post.author_id) {
+    return (
+      <button className="post-delete-btn" onClick={this.removePost}>x</button>
+    );
+  } else {
+    return (
+      <button className="post-unfollow-btn" onClick={this.removeFollow}>Unfollow</button>
+    );
+  }
+}
+
+editButtonVisible(postType) {
+  if (this.props.currentUser.id === this.props.post.author_id) {
+    return (
+      <Link to={`/dashboard/edit/${postType}/${this.props.post.id}`}>
+        <button onClick={this.topFunction} className="post-edit-btn"><i className="fas fa-cog"></i></button>
+      </Link>
+    );
+  } else {
+    return (
+      <div className="post-likes-bar-s">
+        <h4 className="post-like-count">{this.props.post.likes_count}</h4>
+        {this.toggleLikeButton()}
+      </div>
+    );
+  }
+}
+```
+</p>
+</details>
+
+###### Follows
+
+Users can follow other users. Other users can be found under recommended blogs.
+
+<details><summary>Show Code</summary>
+<p>
+
+```js
+
+class FollowUsersIndex extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchFollowUsers();
+  }
+
+  render() {
+    return (
+      <ul className="recommended-blogs">
+        <h3 className="recommended-blogs-heading">RECOMMENDED BLOGS</h3>
+        {this.props.followUsers.map(
+          user => {
+          return <FollowUsersIndexItem
+                  key={user.id}
+                  user={user}
+                  createFollow={this.props.createFollow}
+                  currentUser={this.props.currentUser}
+                  fetchPosts={this.props.fetchPosts}/>;}
+        )}
+      </ul>
+    );
+  }
+}
+
+```
+```js
+
+makeFollow() {
+
+  let followEntry = {
+      "follower_id": this.props.currentUser.id,
+      "followee_id": this.props.user.id
+  };
+
+  this.props.createFollow(followEntry).then(this.props.fetchPosts);
+}
+
+```
+</p>
+</details>
+
+###### Likes
+
+Users can like other users' posts. The like counts on that post can be seen by everyone.
 
 ![post-like-demo](https://media.giphy.com/media/l3diP9PZZ0dAyLPby/giphy.gif)
 
