@@ -88,9 +88,9 @@ const Protected = ({ loggedIn, exact, path, component: Component }) => (
 );
 ```
 </p>
-</details><br \>
+</details>
 
-###### Cloudinary
+##### Cloudinary
 
 Photo, audio, and video can be uploaded using the Cloudinary widget.
 <details><summary>Show Code</summary>
@@ -160,7 +160,7 @@ editButtonVisible(postType) {
 </p>
 </details>
 
-###### Follows
+##### Follows
 
 Users can follow other users. Other users can be found under recommended blogs.
 
@@ -213,7 +213,7 @@ makeFollow() {
 </p>
 </details>
 
-###### Likes
+##### Likes
 
 Users can like other users' posts. The like counts on that post can be seen by everyone.
 
