@@ -2,7 +2,7 @@
 
 [Scrollo Live](https://scrollo.herokuapp.com/#/signup)
 
-Scrollo is a full-stack web application inspired by Tumblr, a microblogging website that allow users to express themselves by creating content in the form of multimedia posts. This application is built using a React/Redux frontend, Ruby on Rails backend, and PostgreSQL database.
+Scrollo is a full-stack web application inspired by Tumblr, a microblogging website that allow users to express themselves by creating content in the form of multimedia posts. This application is built with React, Redux, Ruby on Rails, and PostgreSQL.
 
 ## Features
 
@@ -218,6 +218,22 @@ makeFollow() {
 Users can like other users' posts. The like counts on that post can be seen by everyone.
 
 ![post-like-demo](https://media.giphy.com/media/l3diP9PZZ0dAyLPby/giphy.gif)
+
+<details><summary>Show Code</summary>
+<p>
+
+```js
+likePost() {
+  if (!this.props.liked) {
+    this.props.createLike(this.props.post.id);
+  } else {
+    this.props.deleteLike(this.props.post.id);
+  }
+}
+```
+
+</p>
+</details>
 
 ### Redux
 
